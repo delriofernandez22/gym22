@@ -2,9 +2,18 @@
   "version": 2,
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
+  "functions": {
+    "api/[...path].js": {
+      "runtime": "@vercel/node"
+    }
+  },
   "rewrites": [
     {
-      "source": "/((?!api/.*).*)",
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
+    },
+    {
+      "source": "/(.*)",
       "destination": "/index.html"
     }
   ]
