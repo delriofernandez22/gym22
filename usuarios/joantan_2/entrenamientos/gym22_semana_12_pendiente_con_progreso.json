@@ -1,0 +1,2911 @@
+{
+  "tipo": "gym22_progress_file",
+  "version": "1.0",
+  "usuario": {
+    "idUsuario": "jonatan",
+    "nombre": "Jonatan",
+    "modalidades": [
+      "gym",
+      "box"
+    ],
+    "objetivoPrincipal": "progreso físico adaptativo con IA"
+  },
+  "calendario": [
+    {
+      "fecha": "2026-06-01",
+      "diaSemana": "lunes",
+      "tipo": "gym",
+      "grupo": "cuadriceps",
+      "estado": "pendiente",
+      "titulo": "Cuádriceps",
+      "nivel": 12,
+      "idEntrenamiento": "gym-2026-06-01"
+    },
+    {
+      "fecha": "2026-06-02",
+      "diaSemana": "martes",
+      "tipo": "gym",
+      "grupo": "tren_superior_core",
+      "estado": "pendiente",
+      "titulo": "Tren superior + core",
+      "nivel": 12,
+      "idEntrenamiento": "gym-2026-06-02"
+    },
+    {
+      "fecha": "2026-06-03",
+      "diaSemana": "miércoles",
+      "tipo": "gym",
+      "grupo": "gluteo_femoral_core",
+      "estado": "pendiente",
+      "titulo": "Glúteo / Femoral + core",
+      "nivel": 13,
+      "idEntrenamiento": "gym-2026-06-03"
+    },
+    {
+      "fecha": "2026-06-04",
+      "diaSemana": "jueves",
+      "tipo": "gym",
+      "grupo": "espalda_hombro_biceps_antebrazo",
+      "estado": "completado",
+      "titulo": "Espalda + Hombro + Bíceps + Antebrazo",
+      "nivel": 13,
+      "idEntrenamiento": "gym-2026-06-04"
+    },
+    {
+      "fecha": "2026-06-05",
+      "diaSemana": "viernes",
+      "tipo": "gym",
+      "grupo": "pierna_mixta",
+      "estado": "pendiente",
+      "titulo": "Pierna mixta",
+      "nivel": 13,
+      "idEntrenamiento": "gym-2026-06-05"
+    },
+    {
+      "fecha": "2026-06-06",
+      "diaSemana": "sábado",
+      "tipo": "rest",
+      "estado": "descanso",
+      "titulo": "Descanso",
+      "idEntrenamiento": "rest-2026-06-06"
+    },
+    {
+      "fecha": "2026-06-07",
+      "diaSemana": "domingo",
+      "tipo": "rest",
+      "estado": "descanso",
+      "titulo": "Descanso",
+      "idEntrenamiento": "rest-2026-06-07"
+    }
+  ],
+  "semanas": [
+    {
+      "numeroSemana": 12,
+      "estado": "pendiente",
+      "inicio": "2026-06-01",
+      "fin": "2026-06-07",
+      "dias": [
+        {
+          "fecha": "2026-06-01",
+          "idEntrenamiento": "gym-2026-06-01",
+          "estado": "pendiente"
+        },
+        {
+          "fecha": "2026-06-02",
+          "idEntrenamiento": "gym-2026-06-02",
+          "estado": "pendiente"
+        },
+        {
+          "fecha": "2026-06-03",
+          "idEntrenamiento": "gym-2026-06-03",
+          "estado": "pendiente"
+        },
+        {
+          "fecha": "2026-06-04",
+          "idEntrenamiento": "gym-2026-06-04",
+          "estado": "completado"
+        },
+        {
+          "fecha": "2026-06-05",
+          "idEntrenamiento": "gym-2026-06-05",
+          "estado": "pendiente"
+        },
+        {
+          "fecha": "2026-06-06",
+          "idEntrenamiento": "rest-2026-06-06",
+          "estado": "descanso"
+        },
+        {
+          "fecha": "2026-06-07",
+          "idEntrenamiento": "rest-2026-06-07",
+          "estado": "descanso"
+        }
+      ],
+      "progresoSemana": {
+        "diasEntrenamiento": 5,
+        "diasCompletados": 0,
+        "diasPendientes": 5,
+        "diasDescanso": 2,
+        "porcentaje": 0,
+        "estadoVisual": "░░░░░░░░░░ 0%"
+      }
+    }
+  ],
+  "entrenamientos": {
+    "gym-2026-06-01": {
+      "tipo": "gym_day",
+      "version": "1.0",
+      "estadoDia": "pendiente",
+      "dia": {
+        "fecha": "2026-06-01",
+        "diaSemana": "lunes",
+        "grupoMuscular": "cuadriceps",
+        "nivel": 12,
+        "titulo": "CUÁDRICEPS",
+        "subtitulo": "SEMANA NUEVA – NIVEL 12 | CONSOLIDAR Y ABRIR EL SIGUIENTE SALTO",
+        "fraseDia": "Ya no buscamos levantar más. Buscamos que el siguiente peso parezca normal.",
+        "contexto": "Vienes de una semana muy buena. Así que hoy hacemos progresión selectiva.",
+        "objetivoDia": "Convertir el 70 en sentadilla en terreno conocido."
+      },
+      "datosUsuario": {
+        "pesoCorporalKg": null,
+        "energia": null,
+        "horasSueno": null
+      },
+      "ejercicios": [
+        {
+          "orden": 1,
+          "idEjercicio": "sentadilla_barra",
+          "nombre": "Sentadilla",
+          "ejercicioClave": true,
+          "ultimaSemana": [
+            {
+              "kg": 50,
+              "reps": 8
+            },
+            {
+              "kg": 55,
+              "reps": 8
+            },
+            {
+              "kg": 60,
+              "reps": 8
+            },
+            {
+              "kg": 70,
+              "reps": 8
+            }
+          ],
+          "objetivo": [
+            {
+              "serie": 1,
+              "tipo": "normal",
+              "objetivoKg": 50,
+              "objetivoReps": 8,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 2,
+              "tipo": "normal",
+              "objetivoKg": 55,
+              "objetivoReps": 8,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 3,
+              "tipo": "normal",
+              "objetivoKg": 60,
+              "objetivoReps": 8,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 4,
+              "tipo": "top_set",
+              "objetivoKg": 72.5,
+              "objetivoReps": "6-7",
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": "backoff",
+              "tipo": "backoff",
+              "objetivoKg": 60,
+              "objetivoReps": 10,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            }
+          ],
+          "claves": {
+            "claveAbsoluta": "SOLO una serie nueva.",
+            "evitar": [
+              "perder profundidad",
+              "doblarte adelante"
+            ],
+            "siSaleBien": "Back off 60 x 10"
+          },
+          "tecnica": [
+            "aire antes de bajar",
+            "abdomen duro",
+            "baja estable",
+            "subir fuerte"
+          ],
+          "tip": "La rep 1 debe parecer la rep 7.",
+          "notas": "",
+          "estadoEjercicio": "pendiente"
+        },
+        {
+          "orden": 2,
+          "idEjercicio": "prensa",
+          "nombre": "Prensa",
+          "ejercicioClave": false,
+          "ultimaSemana": [
+            {
+              "kg": 120,
+              "reps": 12
+            },
+            {
+              "kg": 130,
+              "reps": 12
+            },
+            {
+              "kg": 135,
+              "reps": 12
+            }
+          ],
+          "objetivo": [
+            {
+              "serie": 1,
+              "tipo": "normal",
+              "objetivoKg": 120,
+              "objetivoReps": 12,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 2,
+              "tipo": "normal",
+              "objetivoKg": 135,
+              "objetivoReps": 10,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 3,
+              "tipo": "normal",
+              "objetivoKg": 140,
+              "objetivoReps": 10,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            }
+          ],
+          "claves": {
+            "mensaje": "Aquí sí aparece peso nuevo."
+          },
+          "tecnica": [
+            "recorrido completo",
+            "sin bloquear"
+          ],
+          "tip": "Más recorrido = menos peso necesario.",
+          "notas": "",
+          "estadoEjercicio": "pendiente"
+        },
+        {
+          "orden": 3,
+          "idEjercicio": "extensiones",
+          "nombre": "Extensiones",
+          "ejercicioClave": false,
+          "ultimaSemana": [
+            {
+              "kg": 60,
+              "reps": 12
+            },
+            {
+              "kg": 70,
+              "reps": 12
+            },
+            {
+              "kg": 75,
+              "reps": 12
+            },
+            {
+              "kg": 82.5,
+              "reps": 10
+            }
+          ],
+          "objetivo": [
+            {
+              "serie": 1,
+              "tipo": "normal",
+              "objetivoKg": 60,
+              "objetivoReps": 12,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 2,
+              "tipo": "normal",
+              "objetivoKg": 70,
+              "objetivoReps": 12,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 3,
+              "tipo": "normal",
+              "objetivoKg": 75,
+              "objetivoReps": 12,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 4,
+              "tipo": "normal",
+              "objetivoKg": 82.5,
+              "objetivoReps": 12,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": "drop",
+              "tipo": "drop",
+              "objetivoKg": 60,
+              "objetivoReps": "fallo técnico",
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            }
+          ],
+          "claves": {},
+          "tecnica": [
+            "subida fuerte",
+            "bajada lenta",
+            "pausa arriba"
+          ],
+          "tip": "Cuádriceps responde muy bien al control.",
+          "notas": "",
+          "estadoEjercicio": "pendiente"
+        },
+        {
+          "orden": 4,
+          "idEjercicio": "aductores",
+          "nombre": "Aductores",
+          "ejercicioClave": false,
+          "ultimaSemana": [
+            {
+              "kg": 60,
+              "reps": 15
+            },
+            {
+              "kg": 65,
+              "reps": 12
+            },
+            {
+              "kg": 67.5,
+              "reps": 10
+            }
+          ],
+          "objetivo": [
+            {
+              "serie": 1,
+              "tipo": "normal",
+              "objetivoKg": 60,
+              "objetivoReps": 15,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 2,
+              "tipo": "normal",
+              "objetivoKg": 65,
+              "objetivoReps": 12,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 3,
+              "tipo": "normal",
+              "objetivoKg": 67.5,
+              "objetivoReps": 12,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            }
+          ],
+          "claves": {},
+          "tecnica": [
+            "tensión constante"
+          ],
+          "tip": "Estabilidad = más kilos.",
+          "notas": "",
+          "estadoEjercicio": "pendiente"
+        },
+        {
+          "orden": 5,
+          "idEjercicio": "abductores",
+          "nombre": "Abductores",
+          "ejercicioClave": false,
+          "ultimaSemana": [
+            {
+              "kg": 100,
+              "reps": 15
+            },
+            {
+              "kg": 110,
+              "reps": 15
+            },
+            {
+              "kg": 115,
+              "reps": 12
+            }
+          ],
+          "objetivo": [
+            {
+              "serie": 1,
+              "tipo": "normal",
+              "objetivoKg": 100,
+              "objetivoReps": 15,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 2,
+              "tipo": "normal",
+              "objetivoKg": 110,
+              "objetivoReps": 15,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 3,
+              "tipo": "normal",
+              "objetivoKg": 115,
+              "objetivoReps": 15,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": "drop",
+              "tipo": "drop",
+              "objetivoKg": 85,
+              "objetivoReps": "fallo",
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            }
+          ],
+          "claves": {},
+          "tecnica": [
+            "abre fuerte",
+            "controla cierre"
+          ],
+          "tip": "Mantén tensión arriba.",
+          "notas": "",
+          "estadoEjercicio": "pendiente"
+        },
+        {
+          "orden": 6,
+          "idEjercicio": "gemelos",
+          "nombre": "Gemelos",
+          "ejercicioClave": false,
+          "ultimaSemana": [
+            {
+              "kg": 120,
+              "reps": 15
+            },
+            {
+              "kg": 130,
+              "reps": 15
+            },
+            {
+              "kg": 140,
+              "reps": 15
+            },
+            {
+              "kg": 150,
+              "reps": 12
+            }
+          ],
+          "objetivo": [
+            {
+              "serie": 1,
+              "tipo": "normal",
+              "objetivoKg": 130,
+              "objetivoReps": 15,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 2,
+              "tipo": "normal",
+              "objetivoKg": 140,
+              "objetivoReps": 15,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 3,
+              "tipo": "normal",
+              "objetivoKg": 150,
+              "objetivoReps": 12,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 4,
+              "tipo": "normal",
+              "objetivoKg": 155,
+              "objetivoReps": 10,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            }
+          ],
+          "claves": {},
+          "tecnica": [
+            "estira abajo",
+            "pausa arriba"
+          ],
+          "tip": "No conviertas gemelo en rebotes.",
+          "notas": "",
+          "estadoEjercicio": "pendiente"
+        }
+      ],
+      "finisher": {
+        "titulo": "FINISHER ABS",
+        "bloques": [
+          {
+            "nombre": "Crunch pesado",
+            "reps": [
+              15,
+              12,
+              10,
+              8
+            ],
+            "resultado": null,
+            "estadoBloque": "pendiente"
+          },
+          {
+            "nombre": "Plancha con peso",
+            "segundos": [
+              60,
+              75,
+              90
+            ],
+            "resultado": null,
+            "estadoBloque": "pendiente"
+          }
+        ]
+      },
+      "notasDia": {},
+      "misionDia": "72,5 con técnica que te deje repetirlo. No quiero una victoria heroica. Quiero una victoria que podamos usar.",
+      "porcentajeCompletado": 0,
+      "horaInicio": null,
+      "horaFinalizacion": null
+    },
+    "gym-2026-06-02": {
+      "tipo": "gym_day",
+      "version": "1.0",
+      "estadoDia": "pendiente",
+      "dia": {
+        "fecha": "2026-06-02",
+        "diaSemana": "martes",
+        "grupoMuscular": "tren_superior_core",
+        "nivel": 12,
+        "titulo": "TREN SUPERIOR + CORE",
+        "subtitulo": "SEMANA NUEVA – NIVEL 12 | FUERZA QUE SE NOTA",
+        "fraseDia": "Hoy no toca demostrar. Toca consolidar y abrir el siguiente escalón.",
+        "contexto": "Vienes de una semana donde banca ya tocó 57,5, jalón está entrando en 85–87,5, militar subiendo y brazos respondiendo. Hoy hacemos progresión real con cabeza.",
+        "objetivoDia": "Hacer que 57,5 parezca un peso normal."
+      },
+      "datosUsuario": {
+        "pesoCorporalKg": null,
+        "energia": null,
+        "horasSueno": null
+      },
+      "ejercicios": [
+        {
+          "orden": 1,
+          "idEjercicio": "press_banca",
+          "nombre": "Press banca",
+          "ejercicioClave": true,
+          "ultimaSemana": [
+            {
+              "kg": 45,
+              "reps": 10
+            },
+            {
+              "kg": 50,
+              "reps": 8
+            },
+            {
+              "kg": 55,
+              "reps": 9
+            },
+            {
+              "kg": 57.5,
+              "reps": 7
+            }
+          ],
+          "objetivo": [
+            {
+              "serie": 1,
+              "tipo": "normal",
+              "objetivoKg": 45,
+              "objetivoReps": 10,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 2,
+              "tipo": "normal",
+              "objetivoKg": 50,
+              "objetivoReps": 8,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 3,
+              "tipo": "normal",
+              "objetivoKg": 55,
+              "objetivoReps": 9,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 4,
+              "tipo": "top_set",
+              "objetivoKg": 57.5,
+              "objetivoReps": 8,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": "backoff",
+              "tipo": "backoff",
+              "objetivoKg": 50,
+              "objetivoReps": 10,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            }
+          ],
+          "claves": {
+            "claveAbsoluta": "Hoy NO toca 60. Primero cerrar 57,5.",
+            "siSaleMuyBien": "Back off 50 x 10"
+          },
+          "tecnica": [
+            "escápulas atrás",
+            "pies clavados",
+            "toca pecho controlado",
+            "subir sólido"
+          ],
+          "tip": "Quiero velocidad constante.",
+          "notas": "",
+          "estadoEjercicio": "pendiente"
+        },
+        {
+          "orden": 2,
+          "idEjercicio": "jalon_al_pecho",
+          "nombre": "Jalón al pecho",
+          "ejercicioClave": false,
+          "ultimaSemana": [
+            {
+              "kg": 80,
+              "reps": 10
+            },
+            {
+              "kg": 85,
+              "reps": 9
+            },
+            {
+              "kg": 87.5,
+              "reps": "6-8"
+            },
+            {
+              "kg": 82.5,
+              "reps": 10
+            }
+          ],
+          "objetivo": [
+            {
+              "serie": 1,
+              "tipo": "normal",
+              "objetivoKg": 80,
+              "objetivoReps": 10,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 2,
+              "tipo": "normal",
+              "objetivoKg": 85,
+              "objetivoReps": 9,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 3,
+              "tipo": "normal",
+              "objetivoKg": 87.5,
+              "objetivoReps": 8,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 4,
+              "tipo": "normal",
+              "objetivoKg": 82.5,
+              "objetivoReps": 10,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            }
+          ],
+          "claves": {
+            "clave": "SOLO una serie pesada."
+          },
+          "tecnica": [
+            "pecho arriba",
+            "baja codos",
+            "controla negativa"
+          ],
+          "tip": "Espalda manda.",
+          "notas": "",
+          "estadoEjercicio": "pendiente"
+        },
+        {
+          "orden": 3,
+          "idEjercicio": "press_militar",
+          "nombre": "Press militar",
+          "ejercicioClave": false,
+          "ultimaSemana": [
+            {
+              "kg": 30,
+              "reps": 12
+            },
+            {
+              "kg": 35,
+              "reps": 12
+            },
+            {
+              "kg": 42.5,
+              "reps": 9
+            }
+          ],
+          "objetivo": [
+            {
+              "serie": 1,
+              "tipo": "normal",
+              "objetivoKg": 30,
+              "objetivoReps": 12,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 2,
+              "tipo": "normal",
+              "objetivoKg": 35,
+              "objetivoReps": 12,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 3,
+              "tipo": "normal",
+              "objetivoKg": 42.5,
+              "objetivoReps": 10,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            }
+          ],
+          "claves": {
+            "siSale": "siguiente semana 45"
+          },
+          "tecnica": [
+            "abdomen fuerte",
+            "glúteos activos"
+          ],
+          "tip": "Barra vertical.",
+          "notas": "",
+          "estadoEjercicio": "pendiente"
+        },
+        {
+          "orden": 4,
+          "idEjercicio": "curl_biceps",
+          "nombre": "Curl bíceps",
+          "ejercicioClave": false,
+          "ultimaSemana": [
+            {
+              "kg": 32,
+              "reps": 12
+            },
+            {
+              "kg": 36,
+              "reps": 12
+            },
+            {
+              "kg": 38,
+              "reps": "10-12"
+            }
+          ],
+          "objetivo": [
+            {
+              "serie": 1,
+              "tipo": "normal",
+              "objetivoKg": 32,
+              "objetivoReps": 12,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 2,
+              "tipo": "normal",
+              "objetivoKg": 36,
+              "objetivoReps": 12,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 3,
+              "tipo": "normal",
+              "objetivoKg": 40,
+              "objetivoReps": "8-10",
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            }
+          ],
+          "claves": {
+            "clave": "Solo subir si el 38 salió limpio."
+          },
+          "tecnica": [
+            "codos quietos",
+            "negativa lenta"
+          ],
+          "tip": "No balancees.",
+          "notas": "",
+          "estadoEjercicio": "pendiente"
+        },
+        {
+          "orden": 5,
+          "idEjercicio": "triceps",
+          "nombre": "Tríceps",
+          "ejercicioClave": false,
+          "ultimaSemana": [
+            {
+              "kg": 25,
+              "reps": 12
+            },
+            {
+              "kg": 30,
+              "reps": 12
+            },
+            {
+              "kg": 32.5,
+              "reps": 12
+            },
+            {
+              "kg": 35,
+              "reps": 10
+            }
+          ],
+          "objetivo": [
+            {
+              "serie": 1,
+              "tipo": "normal",
+              "objetivoKg": 25,
+              "objetivoReps": 12,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 2,
+              "tipo": "normal",
+              "objetivoKg": 30,
+              "objetivoReps": 12,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 3,
+              "tipo": "normal",
+              "objetivoKg": 35,
+              "objetivoReps": 10,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 4,
+              "tipo": "normal",
+              "objetivoKg": 35,
+              "objetivoReps": "10-12",
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            }
+          ],
+          "claves": {},
+          "tecnica": [
+            "extensión completa",
+            "codos fijos"
+          ],
+          "tip": "Aquí se gana banca.",
+          "notas": "",
+          "estadoEjercicio": "pendiente"
+        },
+        {
+          "orden": 6,
+          "idEjercicio": "antebrazo",
+          "nombre": "Antebrazo",
+          "ejercicioClave": false,
+          "ultimaSemana": [
+            {
+              "kg": 22,
+              "reps": 12
+            },
+            {
+              "kg": 24,
+              "reps": "8-10"
+            }
+          ],
+          "objetivo": [
+            {
+              "serie": 1,
+              "tipo": "normal",
+              "objetivoKg": 22,
+              "objetivoReps": 12,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 2,
+              "tipo": "normal",
+              "objetivoKg": 24,
+              "objetivoReps": 10,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 3,
+              "tipo": "normal",
+              "objetivoKg": 24,
+              "objetivoReps": 10,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            }
+          ],
+          "claves": {},
+          "tecnica": [],
+          "tip": "",
+          "notas": "",
+          "estadoEjercicio": "pendiente"
+        }
+      ],
+      "finisher": {
+        "titulo": "CORE ABS MÁS FUERTES",
+        "bloques": [
+          {
+            "nombre": "Crunch pesado",
+            "reps": [
+              15,
+              12,
+              10,
+              8
+            ],
+            "resultado": null,
+            "estadoBloque": "pendiente"
+          },
+          {
+            "nombre": "Plancha con peso",
+            "segundos": [
+              60,
+              75,
+              90
+            ],
+            "resultado": null,
+            "estadoBloque": "pendiente"
+          }
+        ]
+      },
+      "notasDia": {},
+      "misionDia": "Hacer que 57,5 parezca un peso normal. Porque cuando eso pase, 60 ya no será una sorpresa.",
+      "porcentajeCompletado": 0,
+      "horaInicio": null,
+      "horaFinalizacion": null
+    },
+    "gym-2026-06-03": {
+      "tipo": "gym_day",
+      "version": "1.0",
+      "estadoDia": "pendiente",
+      "dia": {
+        "fecha": "2026-06-03",
+        "diaSemana": "miércoles",
+        "grupoMuscular": "gluteo_femoral_core",
+        "nivel": 13,
+        "titulo": "GLÚTEO / FEMORAL + CORE",
+        "subtitulo": "NIVEL 13 – MÁS DURO, MÁS SERIO",
+        "fraseDia": "Hoy no quiero sobrevivir. Quiero progresar.",
+        "contexto": "",
+        "objetivoDia": "Que el 60 de hip thrust te asuste un poco y aun así salga."
+      },
+      "datosUsuario": {
+        "pesoCorporalKg": null,
+        "energia": null,
+        "horasSueno": null
+      },
+      "ejercicios": [
+        {
+          "orden": 1,
+          "idEjercicio": "hip_thrust",
+          "nombre": "Hip Thrust",
+          "ejercicioClave": true,
+          "ultimaSemana": [
+            {
+              "kg": 45,
+              "reps": 10
+            },
+            {
+              "kg": 50,
+              "reps": 10
+            },
+            {
+              "kg": 55,
+              "reps": 8
+            },
+            {
+              "kg": 57.5,
+              "reps": 8
+            }
+          ],
+          "objetivo": [
+            {
+              "serie": 1,
+              "tipo": "normal",
+              "objetivoKg": 50,
+              "objetivoReps": 10,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 2,
+              "tipo": "normal",
+              "objetivoKg": 55,
+              "objetivoReps": 8,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 3,
+              "tipo": "normal",
+              "objetivoKg": 57.5,
+              "objetivoReps": 8,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 4,
+              "tipo": "top_set",
+              "objetivoKg": 60,
+              "objetivoReps": "6-8",
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": "backoff",
+              "tipo": "backoff",
+              "objetivoKg": 50,
+              "objetivoReps": 12,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            }
+          ],
+          "claves": {
+            "claveAbsoluta": "Hoy aparece peso nuevo REAL.",
+            "siSale": "Back off 50 x 12"
+          },
+          "tecnica": [
+            "2 seg arriba",
+            "pelvis cerrada",
+            "barbilla dentro"
+          ],
+          "tip": "Si pierdes glúteo → bajas peso.",
+          "notas": "",
+          "estadoEjercicio": "pendiente"
+        },
+        {
+          "orden": 2,
+          "idEjercicio": "peso_muerto_rumano",
+          "nombre": "Peso muerto rumano",
+          "ejercicioClave": false,
+          "ultimaSemana": [
+            {
+              "kg": 47.5,
+              "reps": 10
+            },
+            {
+              "kg": 50,
+              "reps": 8
+            },
+            {
+              "kg": 52.5,
+              "reps": 8
+            }
+          ],
+          "objetivo": [
+            {
+              "serie": 1,
+              "tipo": "normal",
+              "objetivoKg": 50,
+              "objetivoReps": 10,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 2,
+              "tipo": "normal",
+              "objetivoKg": 52.5,
+              "objetivoReps": 8,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 3,
+              "tipo": "normal",
+              "objetivoKg": 55,
+              "objetivoReps": 8,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            }
+          ],
+          "claves": {
+            "clave": "Femoral > kilos."
+          },
+          "tecnica": [
+            "4 seg bajada",
+            "pausa abajo",
+            "subir sólido"
+          ],
+          "tip": "Quiero estiramiento brutal.",
+          "notas": "",
+          "estadoEjercicio": "pendiente"
+        },
+        {
+          "orden": 3,
+          "idEjercicio": "curl_femoral",
+          "nombre": "Curl femoral",
+          "ejercicioClave": true,
+          "ultimaSemana": [
+            {
+              "kg": 40,
+              "reps": 12
+            },
+            {
+              "kg": 45,
+              "reps": 10
+            },
+            {
+              "kg": 45,
+              "reps": 10
+            }
+          ],
+          "objetivo": [
+            {
+              "serie": 1,
+              "tipo": "normal",
+              "objetivoKg": 40,
+              "objetivoReps": 12,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 2,
+              "tipo": "normal",
+              "objetivoKg": 45,
+              "objetivoReps": 10,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 3,
+              "tipo": "normal",
+              "objetivoKg": 47.5,
+              "objetivoReps": "8-10",
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            }
+          ],
+          "claves": {
+            "clave": "SOLO una serie nueva."
+          },
+          "tecnica": [
+            "pausa arriba",
+            "negativa lenta",
+            "cadera fija"
+          ],
+          "tip": "Aquí se construye el siguiente nivel.",
+          "notas": "",
+          "estadoEjercicio": "pendiente"
+        },
+        {
+          "orden": 4,
+          "idEjercicio": "patada_gluteo",
+          "nombre": "Patada glúteo",
+          "ejercicioClave": false,
+          "ultimaSemana": [
+            {
+              "kg": 30,
+              "reps": 15
+            },
+            {
+              "kg": 32.5,
+              "reps": 15
+            },
+            {
+              "kg": 35,
+              "reps": "10-12"
+            }
+          ],
+          "objetivo": [
+            {
+              "serie": 1,
+              "tipo": "normal",
+              "objetivoKg": 32.5,
+              "objetivoReps": 15,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 2,
+              "tipo": "normal",
+              "objetivoKg": 35,
+              "objetivoReps": 12,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 3,
+              "tipo": "normal",
+              "objetivoKg": 37.5,
+              "objetivoReps": 10,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            }
+          ],
+          "claves": {},
+          "tecnica": [
+            "aprieta arriba",
+            "controla bajada"
+          ],
+          "tip": "",
+          "notas": "",
+          "estadoEjercicio": "pendiente"
+        },
+        {
+          "orden": 5,
+          "idEjercicio": "abduccion",
+          "nombre": "Abducción",
+          "ejercicioClave": false,
+          "ultimaSemana": [
+            {
+              "kg": 80,
+              "reps": 20
+            },
+            {
+              "kg": 85,
+              "reps": 15
+            },
+            {
+              "kg": 90,
+              "reps": "12-15"
+            }
+          ],
+          "objetivo": [
+            {
+              "serie": 1,
+              "tipo": "normal",
+              "objetivoKg": 85,
+              "objetivoReps": 20,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 2,
+              "tipo": "normal",
+              "objetivoKg": 90,
+              "objetivoReps": 15,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 3,
+              "tipo": "normal",
+              "objetivoKg": 95,
+              "objetivoReps": "12-15",
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            }
+          ],
+          "claves": {
+            "final": "+20 parciales"
+          },
+          "tecnica": [],
+          "tip": "",
+          "notas": "",
+          "estadoEjercicio": "pendiente"
+        }
+      ],
+      "finisher": {
+        "titulo": "CORE ABS MÁS GRANDES",
+        "bloques": [
+          {
+            "nombre": "Crunch pesado",
+            "reps": [
+              15,
+              12,
+              10,
+              8
+            ],
+            "resultado": null,
+            "estadoBloque": "pendiente"
+          },
+          {
+            "nombre": "Plancha con peso",
+            "segundos": [
+              60,
+              75,
+              "90-100"
+            ],
+            "resultado": null,
+            "estadoBloque": "pendiente"
+          }
+        ]
+      },
+      "notasDia": {},
+      "misionDia": "Que el 60 de hip thrust te asuste un poco… y aun así salga.",
+      "porcentajeCompletado": 0,
+      "horaInicio": null,
+      "horaFinalizacion": null
+    },
+    "gym-2026-06-04": {
+      "tipo": "gym_day",
+      "version": "1.0",
+      "estadoDia": "completado",
+      "dia": {
+        "fecha": "2026-06-04",
+        "diaSemana": "jueves",
+        "grupoMuscular": "espalda_hombro_biceps_antebrazo",
+        "nivel": 13,
+        "titulo": "ESPALDA + HOMBRO + BÍCEPS + ANTEBRAZO",
+        "subtitulo": "NIVEL 13 – MÁS DENSIDAD, MÁS FUERZA, MÁS CONTROL",
+        "fraseDia": "Hoy sí apretamos. Pero solo donde te has ganado apretar.",
+        "contexto": "Te voy a exigir un poco más, como pediste. Jalón aún consolidando y lumbar hay que respetarla. Jueves agresivo sin hacer tonterías.",
+        "objetivoDia": "85 x 10 en jalón."
+      },
+      "datosUsuario": {
+        "pesoCorporalKg": null,
+        "energia": null,
+        "horasSueno": null
+      },
+      "ejercicios": [
+        {
+          "orden": 1,
+          "idEjercicio": "jalon_al_pecho",
+          "nombre": "Jalón al pecho",
+          "ejercicioClave": true,
+          "ultimaSemana": [
+            {
+              "kg": 80,
+              "reps": 10
+            },
+            {
+              "kg": 85,
+              "reps": 9
+            },
+            {
+              "kg": 80,
+              "reps": 10
+            },
+            {
+              "kg": 80,
+              "reps": 10
+            }
+          ],
+          "objetivo": [
+            {
+              "serie": 1,
+              "tipo": "normal",
+              "objetivoKg": 80,
+              "objetivoReps": 10,
+              "resultadoKg": 80,
+              "resultadoReps": 10,
+              "rpe": null,
+              "estadoSerie": "completada",
+              "notas": "",
+              "registro": {
+                "estado": "completada",
+                "conseguido": true,
+                "objetivoKg": 80,
+                "objetivoReps": 10,
+                "resultadoKg": 80,
+                "resultadoReps": 10,
+                "motivoNoConseguido": "",
+                "comentario": "",
+                "actualizadoEn": "2026-06-04T11:58:48.193Z"
+              }
+            },
+            {
+              "serie": 2,
+              "tipo": "normal",
+              "objetivoKg": 85,
+              "objetivoReps": 9,
+              "resultadoKg": 85,
+              "resultadoReps": 9,
+              "rpe": null,
+              "estadoSerie": "completada",
+              "notas": "",
+              "registro": {
+                "estado": "completada",
+                "conseguido": true,
+                "objetivoKg": 85,
+                "objetivoReps": 9,
+                "resultadoKg": 85,
+                "resultadoReps": 9,
+                "motivoNoConseguido": "",
+                "comentario": "",
+                "actualizadoEn": "2026-06-04T11:58:48.790Z"
+              }
+            },
+            {
+              "serie": 3,
+              "tipo": "normal",
+              "objetivoKg": 85,
+              "objetivoReps": 10,
+              "resultadoKg": 85,
+              "resultadoReps": 10,
+              "rpe": null,
+              "estadoSerie": "completada",
+              "notas": "",
+              "registro": {
+                "estado": "completada",
+                "conseguido": true,
+                "objetivoKg": 85,
+                "objetivoReps": 10,
+                "resultadoKg": 85,
+                "resultadoReps": 10,
+                "motivoNoConseguido": "",
+                "comentario": "",
+                "actualizadoEn": "2026-06-04T11:58:49.758Z"
+              }
+            },
+            {
+              "serie": 4,
+              "tipo": "normal",
+              "objetivoKg": 82.5,
+              "objetivoReps": 10,
+              "resultadoKg": 82.5,
+              "resultadoReps": 10,
+              "rpe": null,
+              "estadoSerie": "no_conseguida",
+              "notas": "fuerza\n",
+              "registro": {
+                "estado": "no_conseguida",
+                "conseguido": false,
+                "objetivoKg": 82.5,
+                "objetivoReps": 10,
+                "resultadoKg": 82.5,
+                "resultadoReps": 10,
+                "motivoNoConseguido": "fuerza\n",
+                "comentario": "",
+                "actualizadoEn": "2026-06-04T11:59:00.307Z"
+              }
+            },
+            {
+              "serie": "drop",
+              "tipo": "drop",
+              "objetivoKg": 75,
+              "objetivoReps": "AMRAP técnico",
+              "resultadoKg": 75,
+              "resultadoReps": "AMRAP técnico",
+              "rpe": null,
+              "estadoSerie": "completada",
+              "notas": "",
+              "registro": {
+                "estado": "completada",
+                "conseguido": true,
+                "objetivoKg": 75,
+                "objetivoReps": "AMRAP técnico",
+                "resultadoKg": 75,
+                "resultadoReps": "AMRAP técnico",
+                "motivoNoConseguido": "",
+                "comentario": "",
+                "actualizadoEn": "2026-06-04T11:59:01.592Z"
+              }
+            }
+          ],
+          "claves": {
+            "claveAbsoluta": "NO quiero 87,5 todavía. Primero convertir 85 en normal.",
+            "siSale": "Drop 75 x AMRAP técnico"
+          },
+          "tecnica": [
+            "pecho arriba",
+            "hombros abajo",
+            "negativa lenta"
+          ],
+          "tip": "Baja codos. NO manos.",
+          "notas": "",
+          "estadoEjercicio": "pendiente",
+          "registro": {
+            "estado": "pendiente",
+            "comentario": "",
+            "descansoSegundosUsados": []
+          }
+        },
+        {
+          "orden": 2,
+          "idEjercicio": "remo_barra",
+          "nombre": "Remo con barra",
+          "ejercicioClave": false,
+          "ultimaSemana": [
+            {
+              "kg": 50,
+              "reps": 12
+            },
+            {
+              "kg": 55,
+              "reps": 10
+            },
+            {
+              "kg": 57.5,
+              "reps": 10
+            }
+          ],
+          "objetivo": [
+            {
+              "serie": 1,
+              "tipo": "normal",
+              "objetivoKg": 50,
+              "objetivoReps": 12,
+              "resultadoKg": 50,
+              "resultadoReps": 12,
+              "rpe": null,
+              "estadoSerie": "completada",
+              "notas": "",
+              "registro": {
+                "estado": "completada",
+                "conseguido": true,
+                "objetivoKg": 50,
+                "objetivoReps": 12,
+                "resultadoKg": 50,
+                "resultadoReps": 12,
+                "motivoNoConseguido": "",
+                "comentario": "",
+                "actualizadoEn": "2026-06-04T11:59:10.811Z"
+              }
+            },
+            {
+              "serie": 2,
+              "tipo": "normal",
+              "objetivoKg": 57.5,
+              "objetivoReps": 10,
+              "resultadoKg": 57.5,
+              "resultadoReps": 10,
+              "rpe": null,
+              "estadoSerie": "completada",
+              "notas": "",
+              "registro": {
+                "estado": "completada",
+                "conseguido": true,
+                "objetivoKg": 57.5,
+                "objetivoReps": 10,
+                "resultadoKg": 57.5,
+                "resultadoReps": 10,
+                "motivoNoConseguido": "",
+                "comentario": "",
+                "actualizadoEn": "2026-06-04T11:59:11.358Z"
+              }
+            },
+            {
+              "serie": 3,
+              "tipo": "normal",
+              "objetivoKg": 60,
+              "objetivoReps": 8,
+              "resultadoKg": 60,
+              "resultadoReps": 8,
+              "rpe": null,
+              "estadoSerie": "completada",
+              "notas": "",
+              "registro": {
+                "estado": "completada",
+                "conseguido": true,
+                "objetivoKg": 60,
+                "objetivoReps": 8,
+                "resultadoKg": 60,
+                "resultadoReps": 8,
+                "motivoNoConseguido": "",
+                "comentario": "",
+                "actualizadoEn": "2026-06-04T11:59:11.809Z"
+              }
+            }
+          ],
+          "claves": {
+            "condicion": "SOLO si lumbar está perfecta. Si no, repites 57,5."
+          },
+          "tecnica": [
+            "abdomen fuerte",
+            "barra al ombligo",
+            "espalda fija"
+          ],
+          "tip": "Espalda cansada = bien. Lumbar cansada = mal.",
+          "notas": "",
+          "estadoEjercicio": "pendiente",
+          "registro": {
+            "estado": "pendiente",
+            "comentario": "",
+            "descansoSegundosUsados": []
+          }
+        },
+        {
+          "orden": 3,
+          "idEjercicio": "remo_polea",
+          "nombre": "Remo en polea",
+          "ejercicioClave": false,
+          "ultimaSemana": [
+            {
+              "kg": 50,
+              "reps": 15
+            },
+            {
+              "kg": 57.5,
+              "reps": 12
+            },
+            {
+              "kg": 57.5,
+              "reps": 12
+            }
+          ],
+          "objetivo": [
+            {
+              "serie": 1,
+              "tipo": "normal",
+              "objetivoKg": 55,
+              "objetivoReps": 15,
+              "resultadoKg": 55,
+              "resultadoReps": 15,
+              "rpe": null,
+              "estadoSerie": "completada",
+              "notas": "",
+              "registro": {
+                "estado": "completada",
+                "conseguido": true,
+                "objetivoKg": 55,
+                "objetivoReps": 15,
+                "resultadoKg": 55,
+                "resultadoReps": 15,
+                "motivoNoConseguido": "",
+                "comentario": "",
+                "actualizadoEn": "2026-06-04T11:59:17.427Z"
+              }
+            },
+            {
+              "serie": 2,
+              "tipo": "normal",
+              "objetivoKg": 57.5,
+              "objetivoReps": 12,
+              "resultadoKg": 57.5,
+              "resultadoReps": 12,
+              "rpe": null,
+              "estadoSerie": "no_conseguida",
+              "notas": "casi\n",
+              "registro": {
+                "estado": "no_conseguida",
+                "conseguido": false,
+                "objetivoKg": 57.5,
+                "objetivoReps": 12,
+                "resultadoKg": 57.5,
+                "resultadoReps": 12,
+                "motivoNoConseguido": "",
+                "comentario": "casi\n",
+                "actualizadoEn": "2026-06-04T11:59:20.542Z"
+              }
+            },
+            {
+              "serie": 3,
+              "tipo": "normal",
+              "objetivoKg": 60,
+              "objetivoReps": "10-12",
+              "resultadoKg": 60,
+              "resultadoReps": "10-12",
+              "rpe": null,
+              "estadoSerie": "completada",
+              "notas": "",
+              "registro": {
+                "estado": "completada",
+                "conseguido": true,
+                "objetivoKg": 60,
+                "objetivoReps": "10-12",
+                "resultadoKg": 60,
+                "resultadoReps": "10-12",
+                "motivoNoConseguido": "",
+                "comentario": "",
+                "actualizadoEn": "2026-06-04T11:59:29.225Z"
+              }
+            },
+            {
+              "serie": "drop",
+              "tipo": "drop",
+              "objetivoKg": 50,
+              "objetivoReps": "fallo técnico",
+              "resultadoKg": 50,
+              "resultadoReps": "fallo técnico",
+              "rpe": null,
+              "estadoSerie": "completada",
+              "notas": "",
+              "registro": {
+                "estado": "completada",
+                "conseguido": true,
+                "objetivoKg": 50,
+                "objetivoReps": "fallo técnico",
+                "resultadoKg": 50,
+                "resultadoReps": "fallo técnico",
+                "motivoNoConseguido": "",
+                "comentario": "",
+                "actualizadoEn": "2026-06-04T11:59:29.825Z"
+              }
+            }
+          ],
+          "claves": {},
+          "tecnica": [
+            "aprieta atrás",
+            "pausa 1 seg"
+          ],
+          "tip": "Aquí construyes grosor.",
+          "notas": "",
+          "estadoEjercicio": "pendiente",
+          "registro": {
+            "estado": "pendiente",
+            "comentario": "",
+            "descansoSegundosUsados": []
+          }
+        },
+        {
+          "orden": 4,
+          "idEjercicio": "elevaciones_laterales",
+          "nombre": "Elevaciones laterales",
+          "ejercicioClave": false,
+          "ultimaSemana": [
+            {
+              "kg": 30,
+              "reps": 15
+            },
+            {
+              "kg": 32,
+              "reps": 15
+            },
+            {
+              "kg": 35,
+              "reps": "10-12"
+            }
+          ],
+          "objetivo": [
+            {
+              "serie": 1,
+              "tipo": "normal",
+              "objetivoKg": 32,
+              "objetivoReps": 15,
+              "resultadoKg": 32,
+              "resultadoReps": 15,
+              "rpe": null,
+              "estadoSerie": "completada",
+              "notas": "",
+              "registro": {
+                "estado": "completada",
+                "conseguido": true,
+                "objetivoKg": 32,
+                "objetivoReps": 15,
+                "resultadoKg": 32,
+                "resultadoReps": 15,
+                "motivoNoConseguido": "",
+                "comentario": "",
+                "actualizadoEn": "2026-06-04T11:59:33.478Z"
+              }
+            },
+            {
+              "serie": 2,
+              "tipo": "normal",
+              "objetivoKg": 35,
+              "objetivoReps": 10,
+              "resultadoKg": 35,
+              "resultadoReps": 10,
+              "rpe": null,
+              "estadoSerie": "completada",
+              "notas": "",
+              "registro": {
+                "estado": "completada",
+                "conseguido": true,
+                "objetivoKg": 35,
+                "objetivoReps": 10,
+                "resultadoKg": 35,
+                "resultadoReps": 10,
+                "motivoNoConseguido": "",
+                "comentario": "",
+                "actualizadoEn": "2026-06-04T11:59:34.073Z"
+              }
+            },
+            {
+              "serie": 3,
+              "tipo": "normal",
+              "objetivoKg": 35,
+              "objetivoReps": "12-15",
+              "resultadoKg": 35,
+              "resultadoReps": "12-15",
+              "rpe": null,
+              "estadoSerie": "completada",
+              "notas": "",
+              "registro": {
+                "estado": "completada",
+                "conseguido": true,
+                "objetivoKg": 35,
+                "objetivoReps": "12-15",
+                "resultadoKg": 35,
+                "resultadoReps": "12-15",
+                "motivoNoConseguido": "",
+                "comentario": "",
+                "actualizadoEn": "2026-06-04T11:59:34.641Z"
+              }
+            }
+          ],
+          "claves": {},
+          "tecnica": [
+            "sin impulso",
+            "recorrido limpio"
+          ],
+          "tip": "Hombro lateral responde al control.",
+          "notas": "",
+          "estadoEjercicio": "pendiente",
+          "registro": {
+            "estado": "pendiente",
+            "comentario": "",
+            "descansoSegundosUsados": []
+          }
+        },
+        {
+          "orden": 5,
+          "idEjercicio": "face_pull",
+          "nombre": "Face pull",
+          "ejercicioClave": false,
+          "ultimaSemana": [
+            {
+              "kg": 45,
+              "reps": 15
+            },
+            {
+              "kg": 47.5,
+              "reps": 15
+            },
+            {
+              "kg": 50,
+              "reps": 12
+            }
+          ],
+          "objetivo": [
+            {
+              "serie": 1,
+              "tipo": "normal",
+              "objetivoKg": 47.5,
+              "objetivoReps": 15,
+              "resultadoKg": 47.5,
+              "resultadoReps": 15,
+              "rpe": null,
+              "estadoSerie": "completada",
+              "notas": "",
+              "registro": {
+                "estado": "completada",
+                "conseguido": true,
+                "objetivoKg": 47.5,
+                "objetivoReps": 15,
+                "resultadoKg": 47.5,
+                "resultadoReps": 15,
+                "motivoNoConseguido": "",
+                "comentario": "",
+                "actualizadoEn": "2026-06-04T11:59:36.959Z"
+              }
+            },
+            {
+              "serie": 2,
+              "tipo": "normal",
+              "objetivoKg": 50,
+              "objetivoReps": 12,
+              "resultadoKg": 50,
+              "resultadoReps": 12,
+              "rpe": null,
+              "estadoSerie": "completada",
+              "notas": "",
+              "registro": {
+                "estado": "completada",
+                "conseguido": true,
+                "objetivoKg": 50,
+                "objetivoReps": 12,
+                "resultadoKg": 50,
+                "resultadoReps": 12,
+                "motivoNoConseguido": "",
+                "comentario": "",
+                "actualizadoEn": "2026-06-04T11:59:37.508Z"
+              }
+            },
+            {
+              "serie": 3,
+              "tipo": "normal",
+              "objetivoKg": 52.5,
+              "objetivoReps": "10-12",
+              "resultadoKg": 52.5,
+              "resultadoReps": "10-12",
+              "rpe": null,
+              "estadoSerie": "completada",
+              "notas": "",
+              "registro": {
+                "estado": "completada",
+                "conseguido": true,
+                "objetivoKg": 52.5,
+                "objetivoReps": "10-12",
+                "resultadoKg": 52.5,
+                "resultadoReps": "10-12",
+                "motivoNoConseguido": "",
+                "comentario": "",
+                "actualizadoEn": "2026-06-04T11:59:38.175Z"
+              }
+            }
+          ],
+          "claves": {},
+          "tecnica": [
+            "cuerda hacia ojos",
+            "codos altos"
+          ],
+          "tip": "Esto mantiene hombros sanos.",
+          "notas": "",
+          "estadoEjercicio": "pendiente",
+          "registro": {
+            "estado": "pendiente",
+            "comentario": "",
+            "descansoSegundosUsados": []
+          }
+        },
+        {
+          "orden": 6,
+          "idEjercicio": "biceps_mancuerna",
+          "nombre": "Bíceps mancuerna",
+          "ejercicioClave": false,
+          "ultimaSemana": [
+            {
+              "kg": 32,
+              "reps": 12
+            },
+            {
+              "kg": 36,
+              "reps": 12
+            },
+            {
+              "kg": 40,
+              "reps": "8-10"
+            }
+          ],
+          "objetivo": [
+            {
+              "serie": 1,
+              "tipo": "normal",
+              "objetivoKg": 32,
+              "objetivoReps": 12,
+              "resultadoKg": 32,
+              "resultadoReps": 12,
+              "rpe": null,
+              "estadoSerie": "completada",
+              "notas": "",
+              "registro": {
+                "estado": "completada",
+                "conseguido": true,
+                "objetivoKg": 32,
+                "objetivoReps": 12,
+                "resultadoKg": 32,
+                "resultadoReps": 12,
+                "motivoNoConseguido": "",
+                "comentario": "",
+                "actualizadoEn": "2026-06-04T11:59:41.460Z"
+              }
+            },
+            {
+              "serie": 2,
+              "tipo": "normal",
+              "objetivoKg": 36,
+              "objetivoReps": 12,
+              "resultadoKg": 36,
+              "resultadoReps": 12,
+              "rpe": null,
+              "estadoSerie": "completada",
+              "notas": "",
+              "registro": {
+                "estado": "completada",
+                "conseguido": true,
+                "objetivoKg": 36,
+                "objetivoReps": 12,
+                "resultadoKg": 36,
+                "resultadoReps": 12,
+                "motivoNoConseguido": "",
+                "comentario": "",
+                "actualizadoEn": "2026-06-04T11:59:42.041Z"
+              }
+            },
+            {
+              "serie": 3,
+              "tipo": "normal",
+              "objetivoKg": 40,
+              "objetivoReps": "10-12",
+              "resultadoKg": 40,
+              "resultadoReps": "10-12",
+              "rpe": null,
+              "estadoSerie": "completada",
+              "notas": "",
+              "registro": {
+                "estado": "completada",
+                "conseguido": true,
+                "objetivoKg": 40,
+                "objetivoReps": "10-12",
+                "resultadoKg": 40,
+                "resultadoReps": "10-12",
+                "motivoNoConseguido": "",
+                "comentario": "",
+                "actualizadoEn": "2026-06-04T11:59:42.574Z"
+              }
+            }
+          ],
+          "claves": {},
+          "tecnica": [
+            "codos quietos",
+            "negativa lenta"
+          ],
+          "tip": "Sin balanceo.",
+          "notas": "",
+          "estadoEjercicio": "pendiente",
+          "registro": {
+            "estado": "pendiente",
+            "comentario": "",
+            "descansoSegundosUsados": []
+          }
+        },
+        {
+          "orden": 7,
+          "idEjercicio": "antebrazo_agarre",
+          "nombre": "Antebrazo / agarre",
+          "ejercicioClave": false,
+          "ultimaSemana": [],
+          "objetivo": [
+            {
+              "serie": 1,
+              "tipo": "paseo",
+              "objetivoTiempoSeg": "65-70",
+              "resultadoTiempoSeg": null,
+              "estadoSerie": "completada",
+              "rpe": null,
+              "notas": "",
+              "registro": {
+                "estado": "completada",
+                "conseguido": true,
+                "objetivoKg": null,
+                "objetivoReps": null,
+                "resultadoKg": "",
+                "resultadoReps": "",
+                "motivoNoConseguido": "",
+                "comentario": "",
+                "actualizadoEn": "2026-06-04T11:59:45.242Z"
+              },
+              "resultadoKg": "",
+              "resultadoReps": ""
+            },
+            {
+              "serie": 2,
+              "tipo": "normal",
+              "objetivoKg": 24,
+              "objetivoReps": 10,
+              "resultadoKg": 24,
+              "resultadoReps": 10,
+              "rpe": null,
+              "estadoSerie": "completada",
+              "notas": "",
+              "registro": {
+                "estado": "completada",
+                "conseguido": true,
+                "objetivoKg": 24,
+                "objetivoReps": 10,
+                "resultadoKg": 24,
+                "resultadoReps": 10,
+                "motivoNoConseguido": "",
+                "comentario": "",
+                "actualizadoEn": "2026-06-04T11:59:45.758Z"
+              }
+            },
+            {
+              "serie": 3,
+              "tipo": "normal",
+              "objetivoKg": 24,
+              "objetivoReps": "10-12",
+              "resultadoKg": 24,
+              "resultadoReps": "10-12",
+              "rpe": null,
+              "estadoSerie": "completada",
+              "notas": "",
+              "registro": {
+                "estado": "completada",
+                "conseguido": true,
+                "objetivoKg": 24,
+                "objetivoReps": "10-12",
+                "resultadoKg": 24,
+                "resultadoReps": "10-12",
+                "motivoNoConseguido": "",
+                "comentario": "",
+                "actualizadoEn": "2026-06-04T11:59:46.274Z"
+              }
+            }
+          ],
+          "claves": {},
+          "tecnica": [],
+          "tip": "",
+          "notas": "",
+          "estadoEjercicio": "pendiente",
+          "registro": {
+            "estado": "pendiente",
+            "comentario": "",
+            "descansoSegundosUsados": []
+          }
+        }
+      ],
+      "finisher": {
+        "titulo": "CORE ABS MÁS GRANDES",
+        "bloques": [
+          {
+            "nombre": "Crunch pesado",
+            "reps": [
+              15,
+              12,
+              10,
+              8
+            ],
+            "resultado": null,
+            "estadoBloque": "pendiente"
+          },
+          {
+            "nombre": "Plancha con peso",
+            "segundos": [
+              60,
+              75,
+              "90-100"
+            ],
+            "resultado": null,
+            "estadoBloque": "pendiente"
+          }
+        ]
+      },
+      "notasDia": {},
+      "misionDia": "85 x 10 en jalón. Porque si eso sale, el siguiente nivel aparece solo.",
+      "porcentajeCompletado": 0,
+      "horaInicio": null,
+      "horaFinalizacion": null,
+      "registro": {
+        "estado": "completado",
+        "iniciadoEn": null,
+        "finalizadoEn": "2026-06-04T11:59:47.875Z",
+        "duracionRealSegundos": null,
+        "comentariosGenerales": ""
+      }
+    },
+    "gym-2026-06-05": {
+      "tipo": "gym_day",
+      "version": "1.0",
+      "estadoDia": "pendiente",
+      "dia": {
+        "fecha": "2026-06-05",
+        "diaSemana": "viernes",
+        "grupoMuscular": "pierna_mixta",
+        "nivel": 13,
+        "titulo": "PIERNA MIXTA",
+        "subtitulo": "NIVEL 13 – FUERZA REAL + FEMORAL SERIO",
+        "fraseDia": "Hoy no quiero una sesión bonita. Quiero una sesión que te haga mejor.",
+        "contexto": "Sentadilla subiendo, hack ya tocando 77,5, rumano creciendo y femoral respondiendo. Viernes fuerte.",
+        "objetivoDia": "Que el 80 en hack te parezca pesado pero posible."
+      },
+      "datosUsuario": {
+        "pesoCorporalKg": null,
+        "energia": null,
+        "horasSueno": null
+      },
+      "ejercicios": [
+        {
+          "orden": 1,
+          "idEjercicio": "hack_squat",
+          "nombre": "Hack Squat",
+          "ejercicioClave": true,
+          "ultimaSemana": [
+            {
+              "kg": 60,
+              "reps": 10
+            },
+            {
+              "kg": 65,
+              "reps": 10
+            },
+            {
+              "kg": 70,
+              "reps": 10
+            },
+            {
+              "kg": 77.5,
+              "reps": 8
+            }
+          ],
+          "objetivo": [
+            {
+              "serie": 1,
+              "tipo": "normal",
+              "objetivoKg": 60,
+              "objetivoReps": 10,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 2,
+              "tipo": "normal",
+              "objetivoKg": 65,
+              "objetivoReps": 10,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 3,
+              "tipo": "normal",
+              "objetivoKg": 70,
+              "objetivoReps": 10,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 4,
+              "tipo": "top_set",
+              "objetivoKg": 80,
+              "objetivoReps": "6-8",
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": "backoff",
+              "tipo": "backoff",
+              "objetivoKg": 60,
+              "objetivoReps": 12,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            }
+          ],
+          "claves": {
+            "claveAbsoluta": "SOLO una serie nueva.",
+            "siTecnicaCae": "vuelves a 77,5",
+            "siSale": "Back off 60 x 12"
+          },
+          "tecnica": [
+            "profundidad real",
+            "sin rebote",
+            "abdomen fuerte"
+          ],
+          "tip": "Quiero que la última rep se parezca a la primera.",
+          "notas": "",
+          "estadoEjercicio": "pendiente"
+        },
+        {
+          "orden": 2,
+          "idEjercicio": "peso_muerto_rumano",
+          "nombre": "Peso muerto rumano",
+          "ejercicioClave": false,
+          "ultimaSemana": [
+            {
+              "kg": 50,
+              "reps": 10
+            },
+            {
+              "kg": 52.5,
+              "reps": 8
+            },
+            {
+              "kg": 55,
+              "reps": 8
+            }
+          ],
+          "objetivo": [
+            {
+              "serie": 1,
+              "tipo": "normal",
+              "objetivoKg": 50,
+              "objetivoReps": 10,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 2,
+              "tipo": "normal",
+              "objetivoKg": 55,
+              "objetivoReps": 8,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 3,
+              "tipo": "normal",
+              "objetivoKg": 57.5,
+              "objetivoReps": "6-8",
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            }
+          ],
+          "claves": {
+            "clave": "Femoral. NO lumbar."
+          },
+          "tecnica": [
+            "4 seg bajada",
+            "pausa abajo",
+            "subir sólido"
+          ],
+          "tip": "Si no estira → baja velocidad.",
+          "notas": "",
+          "estadoEjercicio": "pendiente"
+        },
+        {
+          "orden": 3,
+          "idEjercicio": "curl_femoral",
+          "nombre": "Curl femoral",
+          "ejercicioClave": true,
+          "ultimaSemana": [
+            {
+              "kg": 40,
+              "reps": 12
+            },
+            {
+              "kg": 45,
+              "reps": 10
+            },
+            {
+              "kg": 47.5,
+              "reps": 8
+            }
+          ],
+          "objetivo": [
+            {
+              "serie": 1,
+              "tipo": "normal",
+              "objetivoKg": 40,
+              "objetivoReps": 12,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 2,
+              "tipo": "normal",
+              "objetivoKg": 45,
+              "objetivoReps": 10,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 3,
+              "tipo": "normal",
+              "objetivoKg": 47.5,
+              "objetivoReps": 10,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            }
+          ],
+          "claves": {
+            "clave": "NO quiero subir todavía. Primero dominar 47,5."
+          },
+          "tecnica": [
+            "pausa arriba",
+            "negativa lenta",
+            "cadera fija"
+          ],
+          "tip": "Este ejercicio ya dejó de ser tu debilidad.",
+          "notas": "",
+          "estadoEjercicio": "pendiente"
+        },
+        {
+          "orden": 4,
+          "idEjercicio": "prensa",
+          "nombre": "Prensa",
+          "ejercicioClave": false,
+          "ultimaSemana": [
+            {
+              "kg": 120,
+              "reps": 12
+            },
+            {
+              "kg": 130,
+              "reps": 12
+            },
+            {
+              "kg": "135-140",
+              "reps": "8-10"
+            }
+          ],
+          "objetivo": [
+            {
+              "serie": 1,
+              "tipo": "normal",
+              "objetivoKg": 120,
+              "objetivoReps": 12,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 2,
+              "tipo": "normal",
+              "objetivoKg": 135,
+              "objetivoReps": 10,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 3,
+              "tipo": "normal",
+              "objetivoKg": 140,
+              "objetivoReps": 10,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            }
+          ],
+          "claves": {
+            "siHackVacia": "mantén 135"
+          },
+          "tecnica": [
+            "recorrido completo",
+            "sin bloquear"
+          ],
+          "tip": "Quiero piernas trabajando, no ego.",
+          "notas": "",
+          "estadoEjercicio": "pendiente"
+        },
+        {
+          "orden": 5,
+          "idEjercicio": "gemelos",
+          "nombre": "Gemelos",
+          "ejercicioClave": false,
+          "ultimaSemana": [
+            {
+              "kg": 130,
+              "reps": 15
+            },
+            {
+              "kg": 140,
+              "reps": 15
+            },
+            {
+              "kg": 150,
+              "reps": 12
+            }
+          ],
+          "objetivo": [
+            {
+              "serie": 1,
+              "tipo": "normal",
+              "objetivoKg": 130,
+              "objetivoReps": 15,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 2,
+              "tipo": "normal",
+              "objetivoKg": 140,
+              "objetivoReps": 15,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 3,
+              "tipo": "normal",
+              "objetivoKg": 150,
+              "objetivoReps": 12,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 4,
+              "tipo": "normal",
+              "objetivoKg": 155,
+              "objetivoReps": "10-12",
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": "final",
+              "tipo": "drop",
+              "objetivoKg": 120,
+              "objetivoReps": "fallo + 20 seg arriba",
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            }
+          ],
+          "claves": {},
+          "tecnica": [],
+          "tip": "",
+          "notas": "",
+          "estadoEjercicio": "pendiente"
+        },
+        {
+          "orden": 6,
+          "idEjercicio": "tibial_anterior",
+          "nombre": "Tibial anterior",
+          "ejercicioClave": false,
+          "ultimaSemana": [],
+          "objetivo": [
+            {
+              "serie": 1,
+              "tipo": "normal",
+              "objetivoKg": 130,
+              "objetivoReps": null,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 2,
+              "tipo": "normal",
+              "objetivoKg": 140,
+              "objetivoReps": null,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            },
+            {
+              "serie": 3,
+              "tipo": "normal",
+              "objetivoKg": 150,
+              "objetivoReps": null,
+              "resultadoKg": null,
+              "resultadoReps": null,
+              "rpe": null,
+              "estadoSerie": "pendiente",
+              "notas": ""
+            }
+          ],
+          "claves": {},
+          "tecnica": [],
+          "tip": "",
+          "notas": "",
+          "estadoEjercicio": "pendiente"
+        }
+      ],
+      "finisher": {
+        "titulo": "ABS SEGUIMOS PRIORIZANDO",
+        "bloques": [
+          {
+            "nombre": "Crunch pesado",
+            "reps": [
+              15,
+              12,
+              10,
+              8
+            ],
+            "resultado": null,
+            "estadoBloque": "pendiente"
+          },
+          {
+            "nombre": "Plancha con peso",
+            "segundos": [
+              60,
+              75,
+              "90-100"
+            ],
+            "resultado": null,
+            "estadoBloque": "pendiente"
+          }
+        ]
+      },
+      "notasDia": {},
+      "misionDia": "Que el 80 en hack te parezca pesado… pero posible. Porque si eso pasa, estás entrando en otro nivel.",
+      "porcentajeCompletado": 0,
+      "horaInicio": null,
+      "horaFinalizacion": null
+    },
+    "rest-2026-06-06": {
+      "tipo": "rest_day",
+      "version": "1.0",
+      "estadoDia": "descanso",
+      "dia": {
+        "fecha": "2026-06-06",
+        "diaSemana": "sábado",
+        "titulo": "DESCANSO"
+      },
+      "notas": "Día de descanso."
+    },
+    "rest-2026-06-07": {
+      "tipo": "rest_day",
+      "version": "1.0",
+      "estadoDia": "descanso",
+      "dia": {
+        "fecha": "2026-06-07",
+        "diaSemana": "domingo",
+        "titulo": "DESCANSO"
+      },
+      "notas": "Día de descanso."
+    }
+  },
+  "configuracionIA": {
+    "rol": "Actúa como entrenador experto en fuerza, hipertrofia, rendimiento, recuperación y progresión deportiva.",
+    "modo": "entrenador_adaptativo",
+    "instruccionPrincipal": "Analiza todo el archivo y añade la siguiente semana pendiente sin borrar historial.",
+    "principio": "No usar reglas mecánicas simples. Analizar rendimiento, fatiga, sueño, energía, técnica y tendencia.",
+    "salidaEsperada": "Mismo JSON con una nueva semana añadida en estado pendiente y resultados null."
+  },
+  "logicaApp": {
+    "actualizacionEstados": {
+      "alEmpezarEntrenamiento": {
+        "estadoDia": "en_progreso",
+        "estadoCalendario": "en_progreso",
+        "guardarHoraInicio": true
+      },
+      "alCompletarSerie": {
+        "estadoSerie": "completada",
+        "recalcularPorcentajeDia": true
+      },
+      "alFinalizarEjercicio": {
+        "estadoEjercicio": "completado_si_todas_sus_series_estan_completadas"
+      },
+      "alFinalizarEntrenamiento": {
+        "estadoDia": "completado",
+        "estadoCalendario": "completado",
+        "estadoEnSemanaDia": "completado",
+        "porcentajeCompletado": 100,
+        "guardarHoraFinalizacion": true,
+        "actualizarProgresoSemana": true
+      },
+      "reglaImportante": "Si queda alguna serie obligatoria sin completar, el estadoDia no debe pasar a completado."
+    }
+  }
+}

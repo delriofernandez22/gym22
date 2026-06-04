@@ -1347,8 +1347,12 @@ app.get('/api/debug/supabase', (req, res) => {
   });
 });
 
-app.listen(port, '0.0.0.0', () => {
-  console.log(`API GYM22 escuchando en http://localhost:${port}`);
-  const dbg = supabaseDebugInfo();
-  console.log(`[SUPABASE] enabled=${dbg.enabled} bucket=${dbg.bucket} key=${dbg.keyPrefix ? dbg.keyPrefix + '...' : 'NO_KEY'}`);
-});
+if (!process.env.VERCEL) {
+  app.listen(port, '0.0.0.0', () => {
+    console.log(`API GYM22 escuchando en http://localhost:${port}`);
+    const dbg = supabaseDebugInfo();
+    console.log(`[SUPABASE] enabled=${dbg.enabled} bucket=${dbg.bucket} key=${dbg.keyPrefix ? dbg.keyPrefix + '...' : 'NO_KEY'}`);
+  });
+}
+
+export default app;

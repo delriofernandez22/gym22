@@ -1,0 +1,10 @@
+{
+  "id": "tarjeta-principal",
+  "title": "MÁS FUERTE QUE AYER",
+  "subtitle": "Tu versión más fuerte",
+  "enabled": true,
+  "order": 1,
+  "photoFile": "tu-version-mas-fuerte.jpg",
+  "pesoObjetivo": "80",
+  "updatedAt": "2026-06-03T19:20:25.039Z"
+}

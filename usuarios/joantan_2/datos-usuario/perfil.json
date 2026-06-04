@@ -1,0 +1,39 @@
+{
+  "id": "7c5eb234-3c12-4512-89b3-fc72031c62bb",
+  "email": "delriofernandez@gmail.com",
+  "folderName": "joantan_2",
+  "nombre": "joantan",
+  "apellidos": "",
+  "perfilCompleto": true,
+  "onboardingStep": 4,
+  "datosFisicos": {
+    "nombre": "joantan",
+    "edad": "32",
+    "altura": "178",
+    "peso": "78",
+    "grasa": "",
+    "imc": 24.6
+  },
+  "objetivo": {
+    "objetivo": "ganar_musculo"
+  },
+  "practicas": {
+    "practicas": [
+      "gym",
+      "hyrox",
+      "crossfit"
+    ],
+    "otro": ""
+  },
+  "experiencia": {
+    "experiencia": "intermedio",
+    "diasSemana": "5",
+    "tiempoSesion": "45_60",
+    "lesiones": "",
+    "observaciones": ""
+  },
+  "fotoPerfil": "",
+  "createdAt": "2026-06-03T18:54:49.244Z",
+  "updatedAt": "2026-06-03T18:55:21.356Z",
+  "passwordHash": "$2b$10$xt2I7QVw27oQFTqltS/qR.FJWTddeJGGHXWAbZXrVj0mRGsLeMIUu"
+}
