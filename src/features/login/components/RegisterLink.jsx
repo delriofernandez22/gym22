@@ -1,0 +1,1 @@
+export default function RegisterLink({onClick}){return <p className="login-register"><span>¿No tienes cuenta?</span><button type="button" className="login-register-link" onClick={onClick}>Regístrate</button></p>}

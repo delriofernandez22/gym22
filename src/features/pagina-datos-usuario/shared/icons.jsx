@@ -1,0 +1,18 @@
+export function CameraIcon(){return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M4 8h4l1.6-2h4.8L16 8h4v11H4z"/><circle cx="12" cy="13" r="3.2"/></svg>}
+export function UserIcon(){return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><circle cx="12" cy="7" r="3.2"/><path d="M4.5 21c.8-4.2 4-6.2 7.5-6.2s6.7 2 7.5 6.2"/></svg>}
+export function CalendarIcon(){return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><rect x="4" y="5" width="16" height="15" rx="1.5"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>}
+export function RulerIcon(){return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M8 3h8v18H8zM12 6h4M12 10h4M12 14h4M12 18h4"/></svg>}
+export function WeightIcon(){return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M7 7h10l1.5 14h-13z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>}
+export function PercentIcon(){return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M19 5 5 19"/><circle cx="7" cy="7" r="2"/><circle cx="17" cy="17" r="2"/></svg>}
+export function MuscleIcon(){return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M7 14c2-3 2-6 5-8 1.2-.8 2.4.7 1.6 1.9l-.7 1.1h2.6c2.7 0 4.5 2.1 4.5 4.4 0 2.6-2.1 4.6-4.8 4.6H8c-1.7 0-3-1.3-3-3v-3"/><path d="M4 13h4v7H4z"/></svg>}
+export function FlameIcon(){return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M12 22c4 0 7-2.8 7-6.8 0-3.3-2-5.3-4.3-7.7-.6 2.8-2.1 4.2-3.7 5.3.2-3.5-1.4-6.1-4-8.8.3 4-2 6.1-2 9.6C5 18.3 8 22 12 22z"/></svg>}
+export function ChartIcon(){return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M4 19h16M6 17v-4h3v4M11 17V9h3v8M16 17V5h3v12M5 10c5-.5 8-2.8 12-7"/></svg>}
+export function TrophyIcon(){return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M8 4h8v4c0 3-1.8 5-4 5s-4-2-4-5z"/><path d="M8 6H4c0 3 1.3 5 4 5M16 6h4c0 3-1.3 5-4 5M12 13v4M8 21h8M9 17h6"/></svg>}
+export function HeartIcon(){return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M20.5 8.5c0 6-8.5 11-8.5 11s-8.5-5-8.5-11A4.5 4.5 0 0 1 12 6a4.5 4.5 0 0 1 8.5 2.5z"/><path d="M4 12h4l1.5-3 3 6 1.5-3h6"/></svg>}
+export function DotsIcon(){return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><circle cx="6" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="18" cy="12" r="1.5"/></svg>}
+export function DumbbellIcon(){return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M3 10v4M6 8v8M9 11h6M18 8v8M21 10v4"/></svg>}
+export function HyroxIcon(){return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M6 20 9 4M15 20l3-16M8 12h8"/></svg>}
+export function KettlebellIcon(){return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M9 8a3 3 0 0 1 6 0"/><path d="M7 9h10l2 10H5z"/></svg>}
+export function RunnerIcon(){return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><circle cx="15" cy="4" r="2"/><path d="m14 7-3 4 4 2 3 5M11 11l-3 1M15 13l-4 6M7 20h4"/></svg>}
+export function ClockIcon(){return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><circle cx="12" cy="12" r="8"/><path d="M12 7v6l4 2"/></svg>}
+export function LockIcon(){return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><rect x="5" y="10" width="14" height="10" rx="1.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>}

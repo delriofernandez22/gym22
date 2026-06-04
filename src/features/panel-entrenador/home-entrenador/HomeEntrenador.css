@@ -1,0 +1,101 @@
+.trainer-page{
+  min-height:100vh;
+  background:#020202;
+  color:#fff;
+  padding:18px 15px 34px;
+  font-family:Inter,system-ui,sans-serif;
+}
+
+.trainer-shell{
+  width:min(460px,100%);
+  margin:0 auto;
+}
+
+.trainer-hero{
+  position:relative;
+  border:1px solid rgba(244,178,51,.30);
+  border-radius:28px;
+  padding:22px 20px;
+  background:
+    radial-gradient(circle at 88% 0%,rgba(244,178,51,.14),transparent 34%),
+    linear-gradient(180deg,#131313,#050505);
+  box-shadow:0 24px 70px rgba(0,0,0,.45);
+}
+
+.trainer-hero p{
+  margin:0 0 8px;
+  color:#f4b233;
+  font-size:12px;
+  font-weight:1000;
+  letter-spacing:.16em;
+}
+
+.trainer-hero h1{
+  margin:0;
+  color:#fff;
+  font-size:44px;
+  line-height:.9;
+  font-weight:1000;
+  letter-spacing:-.07em;
+  text-transform:uppercase;
+}
+
+.trainer-hero span{
+  display:inline-flex;
+  margin-top:14px;
+  color:rgba(255,255,255,.72);
+  font-size:14px;
+  font-weight:800;
+}
+
+.trainer-summary-strip{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:8px;
+  margin:14px 0 18px;
+}
+
+.trainer-summary-strip div{
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:18px;
+  padding:13px 10px;
+  background:rgba(255,255,255,.035);
+}
+
+.trainer-summary-strip strong{
+  display:block;
+  color:#f4b233;
+  font-size:24px;
+  line-height:1;
+  font-weight:1000;
+}
+
+.trainer-summary-strip span{
+  display:block;
+  margin-top:5px;
+  color:#aaa;
+  font-size:10px;
+  font-weight:900;
+  text-transform:uppercase;
+}
+
+.trainer-client-list{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.trainer-loading,.trainer-error{
+  color:#f4b233;
+  text-align:center;
+  padding:20px;
+}
+
+
+/* V22: home entrenador más compacto, sin tarjeta superior */
+.trainer-shell{
+  padding-top:10px;
+}
+.trainer-summary-strip{
+  margin-top:0 !important;
+}

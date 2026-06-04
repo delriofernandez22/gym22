@@ -1,0 +1,23 @@
+.home-page{
+  min-height:100dvh;
+  background:
+    radial-gradient(circle at 50% -10%, rgba(210,152,30,.13), transparent 34%),
+    linear-gradient(180deg, #050505, #000);
+  color:#fff;
+  overflow-x:hidden;
+}
+
+.home-shell{
+  width:100%;
+  max-width:430px;
+  margin:0 auto;
+  padding:calc(env(safe-area-inset-top) + 16px) 14px 42px;
+}
+
+.home-loading,
+.home-error{
+  margin:40px 16px;
+  color:rgba(255,255,255,.72);
+  text-align:center;
+  font-weight:700;
+}

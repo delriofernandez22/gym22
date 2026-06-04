@@ -1,0 +1,68 @@
+.trainer-files-card{
+  margin-top:16px;
+  border:1px solid rgba(244,178,51,.30);
+  border-radius:28px;
+  padding:18px;
+  background:linear-gradient(180deg,#131313,#050505);
+}
+
+.trainer-files-card p{
+  margin:0 0 7px;
+  color:#f4b233;
+  font-size:11px;
+  font-weight:1000;
+  letter-spacing:.14em;
+}
+
+.trainer-files-card h2{
+  margin:0 0 15px;
+  color:#fff;
+  font-size:28px;
+  line-height:1;
+  font-weight:1000;
+  text-transform:uppercase;
+  letter-spacing:-.05em;
+}
+
+.file-actions{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.file-actions label,
+.file-actions button{
+  min-height:50px;
+  border-radius:14px;
+  display:grid;
+  place-items:center;
+  border:1px solid rgba(244,178,51,.38);
+  background:rgba(0,0,0,.25);
+  color:#f4b233;
+  font-size:13px;
+  font-weight:1000;
+}
+
+.file-actions label input{
+  display:none;
+}
+
+.file-actions button{
+  cursor:pointer;
+}
+
+.files-note{
+  display:block;
+  margin-top:12px;
+  color:rgba(255,255,255,.62);
+  font-size:12px;
+  line-height:1.35;
+  font-weight:750;
+}
+
+.file-actions{
+  grid-template-columns:1fr 1fr !important;
+}
+.file-actions button:nth-child(3){
+  grid-column:1 / -1;
+}

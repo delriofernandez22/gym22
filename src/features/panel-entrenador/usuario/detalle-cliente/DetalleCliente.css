@@ -1,0 +1,63 @@
+.trainer-detail-page{
+  min-height:100vh;
+  background:#020202;
+  color:#fff;
+  padding:18px 15px 34px;
+  font-family:Inter,system-ui,sans-serif;
+}
+
+.trainer-detail-shell{
+  width:min(460px,100%);
+  margin:0 auto;
+}
+
+.trainer-detail-header{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:16px;
+}
+
+.trainer-detail-header button{
+  width:42px;
+  height:42px;
+  border:0;
+  border-radius:14px;
+  background:rgba(255,255,255,.06);
+  color:#fff;
+  font-size:32px;
+}
+
+.trainer-detail-header p{
+  margin:0 0 4px;
+  color:#f4b233;
+  font-size:11px;
+  font-weight:1000;
+  letter-spacing:.16em;
+}
+
+.trainer-detail-header h1{
+  margin:0;
+  color:#fff;
+  font-size:27px;
+  line-height:1;
+  font-weight:1000;
+  text-transform:uppercase;
+  letter-spacing:-.05em;
+}
+
+.trainer-message{
+  border:1px solid rgba(244,178,51,.25);
+  background:rgba(244,178,51,.08);
+  color:#f4b233;
+  border-radius:14px;
+  padding:12px;
+  font-size:13px;
+  font-weight:850;
+}
+
+.trainer-loading,.trainer-error{
+  color:#f4b233;
+  text-align:center;
+  padding:20px;
+}
