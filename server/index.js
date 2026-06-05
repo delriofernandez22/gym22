@@ -47,20 +47,36 @@ function isTrainerCredentials(email, password) {
 app.use(express.json({ limit: '15mb' }));
 
 
-function cloudSafeSegment(value) {
-  return String(value || '')
-    .trim()
-    .normalize('NFD')
+function cloudSafeSegment(value, preserveExtension = false) {
+  const raw = String(value || '').trim();
+
+  if (!preserveExtension) {
+    return raw.normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^a-zA-Z0-9_-]/g, '_')
+      .replace(/_+/g, '_')
+      .replace(/^_+|_+$/g, '');
+  }
+
+  const dot = raw.lastIndexOf('.');
+  const name = dot > 0 ? raw.slice(0, dot) : raw;
+  const ext = dot > 0 ? raw.slice(dot + 1) : '';
+
+  const safeName = name.normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
     .replace(/[^a-zA-Z0-9_-]/g, '_')
     .replace(/_+/g, '_')
     .replace(/^_+|_+$/g, '');
+
+  const safeExt = ext.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+
+  return safeExt ? `${safeName}.${safeExt}` : safeName;
 }
 
 function supabasePath(...parts) {
-  return ['usuarios', ...parts]
-    .filter(Boolean)
-    .map(cloudSafeSegment)
+  const cleanParts = ['usuarios', ...parts].filter(Boolean);
+  return cleanParts
+    .map((part, index) => cloudSafeSegment(part, index === cleanParts.length - 1))
     .join('/')
     .replace(/\/+/g, '/');
 }
