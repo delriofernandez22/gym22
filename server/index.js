@@ -10,7 +10,7 @@ import { supabaseEnabled, supabaseDebugInfo, uploadText, uploadBuffer, downloadT
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const projectRoot = path.resolve(__dirname, '..');
-const usersDir = process.env.RUNTIME_DATA_DIR || (supabaseEnabled() ? path.join('/tmp', 'gym22-usuarios') : path.join(projectRoot, 'usuarios'));
+const usersDir = path.join(projectRoot, 'usuarios');
 const indexPath = path.join(usersDir, '_index.json');
 const app = express();
 const port = Number(process.env.API_PORT || 3001);
