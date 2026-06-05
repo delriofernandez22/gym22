@@ -5,7 +5,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import bcrypt from 'bcryptjs';
 import { fileURLToPath } from 'node:url';
-import { supabaseEnabled, supabaseDebugInfo, uploadText, uploadBuffer, downloadText, downloadBuffer, listFolder } from './supabaseAdapter.js';
+import { supabaseEnabled, supabaseDebugInfo, uploadText, uploadBuffer, downloadText, downloadBuffer, listFolder, deleteObject } from './supabaseAdapter.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -1211,6 +1211,46 @@ async function listClientUsersForTrainer() {
   return clients;
 }
 
+
+function parseCalendarMonth(yearValue, monthValue) {
+  const now = new Date();
+  const year = Number(yearValue || now.getFullYear());
+  const month = Number(monthValue || (now.getMonth() + 1));
+  if (!Number.isFinite(year) || !Number.isFinite(month) || month < 1 || month > 12) {
+    return now;
+  }
+  return new Date(year, month - 1, 1);
+}
+
+app.post('/api/home/calendar-month', async (req, res) => {
+  const email = normalizeEmail(req.body.email);
+  try {
+    const folderName = await getFolderNameByEmail(email);
+    const date = parseCalendarMonth(req.body.year, req.body.month);
+    const calendario = await readTrainingCalendarMonth(folderName, date);
+    return res.json({ ok: true, calendario });
+  } catch (err) {
+    return res.status(404).json({ message: err.message || 'No se pudo cargar el calendario.' });
+  }
+});
+
+app.post('/api/trainer/calendar-month', async (req, res) => {
+  const username = String(req.body.username || '').trim();
+  const password = String(req.body.password || '');
+  const folderName = sanitizeFolderName(req.body.folderName || '');
+
+  if (!isTrainerCredentials(username, password)) return res.status(401).json({ message: 'Acceso entrenador no autorizado.' });
+
+  try {
+    const date = parseCalendarMonth(req.body.year, req.body.month);
+    const calendario = await readTrainingCalendarMonth(folderName, date);
+    return res.json({ ok: true, calendario });
+  } catch (err) {
+    return res.status(404).json({ message: err.message || 'No se pudo cargar el calendario.' });
+  }
+});
+
+
 app.post('/api/trainer/home', async (req, res) => {
   const username = String(req.body.username || '').trim();
   const password = String(req.body.password || '');
@@ -1255,6 +1295,52 @@ app.get('/api/trainer/client-photo', async (req, res) => {
   }
 });
 
+
+function safeTrainingFileName(fileName) {
+  const raw = String(fileName || `entrenamiento-${Date.now()}.json`).trim();
+  const withExtension = raw.toLowerCase().endsWith('.json') ? raw : `${raw}.json`;
+  const base = withExtension.slice(0, -5);
+  const safeBase = base
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-zA-Z0-9_-]/g, '_')
+    .replace(/_+/g, '_')
+    .replace(/^_+|_+$/g, '') || `entrenamiento-${Date.now()}`;
+  return `${safeBase}.json`;
+}
+
+async function listTrainingFiles(folderName) {
+  await hydrateUserFromSupabase(folderName);
+  const trainingDir = path.join(userFolder(folderName), 'entrenamientos');
+  let entries = [];
+  try { entries = await fs.readdir(trainingDir, { withFileTypes: true }); } catch { return []; }
+
+  const files = [];
+  for (const entry of entries) {
+    if (!entry.isFile() || !entry.name.endsWith('.json')) continue;
+    const filePath = path.join(trainingDir, entry.name);
+    try {
+      const stat = await fs.stat(filePath);
+      let resumen = {};
+      try {
+        const data = JSON.parse(await fs.readFile(filePath, 'utf8'));
+        const totalEntrenos = data?.entrenamientos ? Object.keys(data.entrenamientos).length : 0;
+        const calendario = Array.isArray(data?.calendario) ? data.calendario.length : 0;
+        resumen = { totalEntrenos, diasCalendario: calendario };
+      } catch {}
+      files.push({
+        fileName: entry.name,
+        size: stat.size,
+        updatedAt: stat.mtime.toISOString(),
+        resumen,
+      });
+    } catch {}
+  }
+  files.sort((a,b)=>new Date(b.updatedAt)-new Date(a.updatedAt));
+  return files;
+}
+
+
 async function findLatestTrainingJson(folderName) {
   const trainingDir = path.join(userFolder(folderName), 'entrenamientos');
   let entries = [];
@@ -1272,11 +1358,47 @@ async function findLatestTrainingJson(folderName) {
   return files[0] || null;
 }
 
-app.post('/api/trainer/upload-json', async (req, res) => {
+
+app.post('/api/trainer/list-json-files', async (req, res) => {
   const username = String(req.body.username || '').trim();
   const password = String(req.body.password || '');
   const folderName = sanitizeFolderName(req.body.folderName || '');
-  const fileName = sanitizeFolderName(req.body.fileName || `entrenamiento-${Date.now()}`) + '.json';
+
+  if (!isTrainerCredentials(username, password)) return res.status(401).json({ message: 'Acceso entrenador no autorizado.' });
+
+  try {
+    const files = await listTrainingFiles(folderName);
+    return res.json({ ok: true, files });
+  } catch (err) {
+    console.error('[TRAINER list-json-files]', err);
+    return res.status(400).json({ message: err.message || 'No se pudieron listar los entrenamientos.' });
+  }
+});
+
+app.post('/api/trainer/read-json-file', async (req, res) => {
+  const username = String(req.body.username || '').trim();
+  const password = String(req.body.password || '');
+  const folderName = sanitizeFolderName(req.body.folderName || '');
+  const fileName = safeTrainingFileName(req.body.fileName || '');
+
+  if (!isTrainerCredentials(username, password)) return res.status(401).json({ message: 'Acceso entrenador no autorizado.' });
+
+  try {
+    await hydrateUserFromSupabase(folderName);
+    const filePath = path.join(userFolder(folderName), 'entrenamientos', fileName);
+    const content = JSON.parse(await fs.readFile(filePath, 'utf8'));
+    return res.json({ ok: true, fileName, content });
+  } catch (err) {
+    console.error('[TRAINER read-json-file]', err);
+    return res.status(404).json({ message: err.message || 'No se pudo leer el JSON.' });
+  }
+});
+
+app.post('/api/trainer/update-json-file', async (req, res) => {
+  const username = String(req.body.username || '').trim();
+  const password = String(req.body.password || '');
+  const folderName = sanitizeFolderName(req.body.folderName || '');
+  const fileName = safeTrainingFileName(req.body.fileName || '');
   const content = req.body.content;
 
   if (!isTrainerCredentials(username, password)) return res.status(401).json({ message: 'Acceso entrenador no autorizado.' });
@@ -1285,7 +1407,50 @@ app.post('/api/trainer/upload-json', async (req, res) => {
     const parsed = typeof content === 'string' ? JSON.parse(content) : content;
     const trainingDir = path.join(userFolder(folderName), 'entrenamientos');
     await fs.mkdir(trainingDir, { recursive: true });
-    const safeName = fileName.endsWith('.json') ? fileName : `${fileName}.json`;
+    const filePath = path.join(trainingDir, fileName);
+    await fs.writeFile(filePath, JSON.stringify(parsed, null, 2), 'utf8');
+    await syncTrainingFileToSupabase(folderName, fileName, parsed);
+    return res.json({ ok: true, fileName, updatedAt: new Date().toISOString() });
+  } catch (err) {
+    console.error('[TRAINER update-json-file]', err);
+    return res.status(400).json({ message: err.message || 'JSON no válido.' });
+  }
+});
+
+app.post('/api/trainer/delete-json-file', async (req, res) => {
+  const username = String(req.body.username || '').trim();
+  const password = String(req.body.password || '');
+  const folderName = sanitizeFolderName(req.body.folderName || '');
+  const fileName = safeTrainingFileName(req.body.fileName || '');
+
+  if (!isTrainerCredentials(username, password)) return res.status(401).json({ message: 'Acceso entrenador no autorizado.' });
+
+  try {
+    const filePath = path.join(userFolder(folderName), 'entrenamientos', fileName);
+    try { await fs.unlink(filePath); } catch {}
+    if (supabaseEnabled()) await deleteObject(supabasePath(folderName, 'entrenamientos', fileName));
+    return res.json({ ok: true, fileName });
+  } catch (err) {
+    console.error('[TRAINER delete-json-file]', err);
+    return res.status(400).json({ message: err.message || 'No se pudo borrar el JSON.' });
+  }
+});
+
+
+app.post('/api/trainer/upload-json', async (req, res) => {
+  const username = String(req.body.username || '').trim();
+  const password = String(req.body.password || '');
+  const folderName = sanitizeFolderName(req.body.folderName || '');
+  const fileName = safeTrainingFileName(req.body.fileName || `entrenamiento-${Date.now()}.json`);
+  const content = req.body.content;
+
+  if (!isTrainerCredentials(username, password)) return res.status(401).json({ message: 'Acceso entrenador no autorizado.' });
+
+  try {
+    const parsed = typeof content === 'string' ? JSON.parse(content) : content;
+    const trainingDir = path.join(userFolder(folderName), 'entrenamientos');
+    await fs.mkdir(trainingDir, { recursive: true });
+    const safeName = safeTrainingFileName(fileName);
     const filePath = path.join(trainingDir, safeName);
     await fs.writeFile(filePath, JSON.stringify(parsed, null, 2), 'utf8');
     await syncTrainingFileToSupabase(folderName, safeName, parsed);

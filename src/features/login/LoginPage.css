@@ -376,3 +376,34 @@
 .login-submit:disabled{
   opacity:.82;
 }
+
+
+/* V36 responsive: evita que el login se quede estrecho en móviles raros */
+@media (max-aspect-ratio: 9/16){
+  .login-screen{
+    align-items:stretch;
+  }
+  .login-phone-frame{
+    width:100vw;
+    height:100dvh;
+    max-width:none;
+    max-height:none;
+  }
+  .login-hero{
+    object-fit:cover;
+  }
+}
+
+@media (min-width: 700px){
+  .login-screen{
+    align-items:center;
+    padding:24px 0;
+    overflow:auto;
+  }
+  .login-phone-frame{
+    width:min(430px, 100vw);
+    height:min(884px, calc(100vw * 1461 / 711));
+    border-radius:28px;
+    box-shadow:0 30px 90px rgba(0,0,0,.70);
+  }
+}

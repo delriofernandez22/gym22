@@ -53,6 +53,18 @@ export const trainerService = {
   uploadJson(folderName, fileName, content){
     return postJson('/api/trainer/upload-json', trainerBody({folderName, fileName, content}));
   },
+  listJsonFiles(folderName){
+    return postJson('/api/trainer/list-json-files', trainerBody({folderName}));
+  },
+  readJsonFile(folderName, fileName){
+    return postJson('/api/trainer/read-json-file', trainerBody({folderName, fileName}));
+  },
+  updateJsonFile(folderName, fileName, content){
+    return postJson('/api/trainer/update-json-file', trainerBody({folderName, fileName, content}));
+  },
+  deleteJsonFile(folderName, fileName){
+    return postJson('/api/trainer/delete-json-file', trainerBody({folderName, fileName}));
+  },
   async downloadJson(folderName){
     const result = await postJson('/api/trainer/download-json', trainerBody({folderName}));
     const blob = new Blob([JSON.stringify(result.content, null, 2)], {type:'application/json'});

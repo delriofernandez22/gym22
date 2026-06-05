@@ -18,6 +18,10 @@ export default function DetalleCliente(){
   const [client,setClient]=useState(null);
   const [error,setError]=useState('');
   const [message,setMessage]=useState('');
+  const [trainingFiles,setTrainingFiles]=useState([]);
+  const [loadingFiles,setLoadingFiles]=useState(false);
+  const [selectedFile,setSelectedFile]=useState('');
+  const [editorText,setEditorText]=useState('');
   const folderName = new URLSearchParams(window.location.search).get('folder') || '';
 
   async function load(){
@@ -25,8 +29,22 @@ export default function DetalleCliente(){
     setClient(res.client);
   }
 
+  async function loadTrainingFiles(){
+    if(!folderName) return;
+    setLoadingFiles(true);
+    try{
+      const res = await trainerService.listJsonFiles(folderName);
+      setTrainingFiles(res.files || []);
+    }catch(err){
+      setMessage(err.message || 'No se pudieron cargar los archivos.');
+    }finally{
+      setLoadingFiles(false);
+    }
+  }
+
   useEffect(()=>{
     load().catch(err=>setError(err.message || 'No se pudo cargar el cliente.'));
+    loadTrainingFiles();
   },[folderName]);
 
   async function uploadJson(e){
@@ -37,6 +55,7 @@ export default function DetalleCliente(){
       await trainerService.uploadJson(folderName, file.name, text);
       setMessage('JSON subido correctamente.');
       await load();
+      await loadTrainingFiles();
     }catch(err){
       setMessage(err.message || 'No se pudo subir el JSON.');
     }
@@ -57,6 +76,46 @@ export default function DetalleCliente(){
       setMessage('Perfil inicial descargado.');
     }catch(err){
       setMessage(err.message || 'No se pudo descargar el perfil.');
+    }
+  }
+
+
+  async function viewJsonFile(fileName){
+    try{
+      const res = await trainerService.readJsonFile(folderName, fileName);
+      setSelectedFile(res.fileName);
+      setEditorText(JSON.stringify(res.content, null, 2));
+      setMessage('');
+    }catch(err){
+      setMessage(err.message || 'No se pudo abrir el JSON.');
+    }
+  }
+
+  async function saveJsonFile(){
+    if(!selectedFile) return;
+    try{
+      JSON.parse(editorText);
+      await trainerService.updateJsonFile(folderName, selectedFile, editorText);
+      setMessage('JSON actualizado correctamente.');
+      await load();
+      await loadTrainingFiles();
+    }catch(err){
+      setMessage(err.message || 'JSON no válido.');
+    }
+  }
+
+  async function deleteJsonFile(fileName){
+    try{
+      await trainerService.deleteJsonFile(folderName, fileName);
+      if(selectedFile === fileName){
+        setSelectedFile('');
+        setEditorText('');
+      }
+      setMessage('JSON borrado.');
+      await load();
+      await loadTrainingFiles();
+    }catch(err){
+      setMessage(err.message || 'No se pudo borrar el JSON.');
     }
   }
 
@@ -92,7 +151,21 @@ export default function DetalleCliente(){
           <>
             <PerfilUsuario client={client} onPhotoChange={uploadPhoto} />
             <CalendarioUsuario calendario={client.calendarioEntrenamientos} />
-            <GestionArchivos onUploadJson={uploadJson} onDownloadJson={downloadJson} onDownloadProfile={downloadProfile} />
+            <GestionArchivos
+              files={trainingFiles}
+              loadingFiles={loadingFiles}
+              selectedFile={selectedFile}
+              editorText={editorText}
+              onUploadJson={uploadJson}
+              onDownloadJson={downloadJson}
+              onDownloadProfile={downloadProfile}
+              onRefreshFiles={loadTrainingFiles}
+              onViewFile={viewJsonFile}
+              onEditText={setEditorText}
+              onSaveFile={saveJsonFile}
+              onDeleteFile={deleteJsonFile}
+              onCloseEditor={()=>{setSelectedFile(''); setEditorText('');}}
+            />
           </>
         ) : <p className="trainer-loading">Cargando cliente...</p>}
       </section>

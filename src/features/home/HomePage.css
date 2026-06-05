@@ -21,3 +21,25 @@
   text-align:center;
   font-weight:700;
 }
+
+
+/* V36 responsive: misma base estable que EntrenamientoActivo */
+.home-page{
+  padding-left:max(0px, env(safe-area-inset-left));
+  padding-right:max(0px, env(safe-area-inset-right));
+}
+
+.home-shell{
+  width:min(100%, 460px);
+  max-width:460px;
+  box-sizing:border-box;
+  padding-left:16px;
+  padding-right:16px;
+}
+
+@media(max-width:360px){
+  .home-shell{
+    padding-left:12px;
+    padding-right:12px;
+  }
+}

@@ -99,3 +99,36 @@
 .trainer-summary-strip{
   margin-top:0 !important;
 }
+
+
+/* V36 responsive estable */
+.trainer-page{
+  padding-left:max(14px, env(safe-area-inset-left));
+  padding-right:max(14px, env(safe-area-inset-right));
+  overflow-x:hidden;
+}
+
+.trainer-shell{
+  width:min(100%, 460px);
+  max-width:460px;
+  box-sizing:border-box;
+}
+
+@media(min-width:700px){
+  .trainer-shell{
+    padding-top:22px;
+  }
+}
+
+@media(max-width:360px){
+  .trainer-page{
+    padding-left:12px;
+    padding-right:12px;
+  }
+  .trainer-summary-strip{
+    gap:6px;
+  }
+  .trainer-summary-strip div{
+    padding:11px 8px;
+  }
+}

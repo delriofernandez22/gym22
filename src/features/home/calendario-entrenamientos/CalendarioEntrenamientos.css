@@ -634,3 +634,29 @@
 .training-calendar-card .calendar-card-content{
   padding-bottom:22px;
 }
+
+
+/* V37: flechas de cambio de mes funcionales */
+.calendar-month-nav button{
+  cursor:pointer;
+}
+
+.calendar-month-nav button:disabled{
+  opacity:.45;
+  cursor:wait;
+}
+
+.calendar-month-nav.is-loading span{
+  opacity:.7;
+}
+
+.calendar-month-error{
+  margin:0 0 10px;
+  border:1px solid rgba(255,80,80,.22);
+  border-radius:12px;
+  background:rgba(255,80,80,.07);
+  color:#ff9b8a;
+  padding:9px 10px;
+  font-size:12px;
+  font-weight:850;
+}

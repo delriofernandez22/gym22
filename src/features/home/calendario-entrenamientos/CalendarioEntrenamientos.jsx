@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import './CalendarioEntrenamientos.css';
 
 const WEEK_DAYS = ['L', 'M', 'X', 'J', 'V', 'S', 'D'];
@@ -20,15 +21,6 @@ function CalendarIcon(){
   );
 }
 
-function PlanIcon(){
-  return (
-    <svg viewBox="0 0 48 48" aria-hidden="true">
-      <path d="M13 8v7M35 8v7M9 16h30M10 12h28v27H10z"/>
-      <path d="M17 24h14M17 31h10"/>
-    </svg>
-  );
-}
-
 function Chevron(){
   return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>;
 }
@@ -36,12 +28,6 @@ function Chevron(){
 function statusClass(estado){
   if(estado === 'en_progreso') return 'cargado';
   return estado || 'sin_entreno';
-}
-
-function statusSymbol(estado){
-  if(estado === 'completado') return '✓';
-  if(estado === 'no_realizado') return '×';
-  return '';
 }
 
 function buildCalendarCells(dias = []){
@@ -57,13 +43,88 @@ function formatMonth(label){
   return label.charAt(0).toUpperCase() + label.slice(1);
 }
 
-export default function CalendarioEntrenamientos({ calendario }){
-  if(!calendario?.dias?.length) return null;
+async function postJson(url, body){
+  const res = await fetch(url, {
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify(body),
+  });
+  let data = {};
+  try{ data = await res.json(); }catch{}
+  if(!res.ok) throw new Error(data.message || 'No se pudo cargar el calendario.');
+  return data;
+}
 
-  const cells = buildCalendarCells(calendario.dias);
-  const today = calendario.hoy;
-  const resumen = calendario.resumen || {};
+function getTrainerSession(){
+  return {
+    username: localStorage.getItem('gym22.trainerUser') || '',
+    password: localStorage.getItem('gym22.trainerPass') || '',
+  };
+}
+
+function getCurrentUserEmail(){
+  try{
+    const stored = JSON.parse(localStorage.getItem('gym22.currentUser') || '{}');
+    return localStorage.getItem('gym22.currentUserEmail') || stored.email || '';
+  }catch{
+    return localStorage.getItem('gym22.currentUserEmail') || '';
+  }
+}
+
+export default function CalendarioEntrenamientos({ calendario }){
+  const [viewCalendar, setViewCalendar] = useState(calendario || null);
+  const [loadingMonth, setLoadingMonth] = useState(false);
+  const [monthError, setMonthError] = useState('');
+
+  useEffect(()=>{
+    setViewCalendar(calendario || null);
+  }, [calendario]);
+
+  if(!viewCalendar?.dias?.length) return null;
+
+  const cells = buildCalendarCells(viewCalendar.dias);
+  const today = viewCalendar.hoy;
+  const resumen = viewCalendar.resumen || {};
   const incidentes = resumen.noRealizados ?? 0;
+
+  async function loadMonth(offset){
+    if(!viewCalendar) return;
+    const year = Number(viewCalendar.year);
+    const month = Number(viewCalendar.mes);
+    const nextDate = new Date(year, month - 1 + offset, 1);
+    const nextYear = nextDate.getFullYear();
+    const nextMonth = nextDate.getMonth() + 1;
+
+    setLoadingMonth(true);
+    setMonthError('');
+
+    try{
+      const folderName = new URLSearchParams(window.location.search).get('folder') || '';
+
+      if(folderName){
+        const session = getTrainerSession();
+        const res = await postJson('/api/trainer/calendar-month', {
+          ...session,
+          folderName,
+          year: nextYear,
+          month: nextMonth,
+        });
+        setViewCalendar(res.calendario);
+      }else{
+        const email = getCurrentUserEmail();
+        const res = await postJson('/api/home/calendar-month', {
+          email,
+          year: nextYear,
+          month: nextMonth,
+        });
+        setViewCalendar(res.calendario);
+      }
+    }catch(err){
+      setMonthError(err.message || 'No se pudo cambiar de mes.');
+    }finally{
+      setLoadingMonth(false);
+    }
+  }
 
   function openDay(dia){
     if(!dia || dia.placeholder) return;
@@ -84,12 +145,14 @@ export default function CalendarioEntrenamientos({ calendario }){
             <h2>CALENDARIO DE ENTRENAMIENTOS</h2>
           </div>
 
-          <div className="calendar-month-nav">
-            <span>{formatMonth(calendario.mesNombre)}</span>
-            <button type="button" aria-label="Mes anterior">‹</button>
-            <button type="button" aria-label="Mes siguiente">›</button>
+          <div className={`calendar-month-nav ${loadingMonth ? 'is-loading' : ''}`}>
+            <span>{formatMonth(viewCalendar.mesNombre)}</span>
+            <button type="button" aria-label="Mes anterior" onClick={()=>loadMonth(-1)} disabled={loadingMonth}>‹</button>
+            <button type="button" aria-label="Mes siguiente" onClick={()=>loadMonth(1)} disabled={loadingMonth}>›</button>
           </div>
         </header>
+
+        {monthError ? <p className="calendar-month-error">{monthError}</p> : null}
 
         <div className="calendar-weekdays" aria-hidden="true">
           {WEEK_DAYS.map((day)=><span key={day}>{day}</span>)}

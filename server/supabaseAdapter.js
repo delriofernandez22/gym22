@@ -140,3 +140,24 @@ export async function listFolder(prefix) {
 
   return res.json();
 }
+
+
+export async function deleteObject(path) {
+  if (!supabaseEnabled()) return false;
+  const { url, bucket } = getConfig();
+  const clean = String(path || '').replace(/^\/+/, '');
+  const res = await fetch(`${url}/storage/v1/object/${bucket}`, {
+    method: 'DELETE',
+    headers: headers('application/json'),
+    body: JSON.stringify({ prefixes: [clean] }),
+  });
+
+  if (!res.ok) {
+    const details = await res.text().catch(() => '');
+    console.error('[SUPABASE] Error borrando archivo:', res.status, path, details);
+    throw new Error(`Supabase delete failed ${res.status}: ${details}`);
+  }
+
+  console.log('[SUPABASE] Borrado:', path);
+  return true;
+}
